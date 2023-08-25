@@ -25,11 +25,6 @@
             z-index: -1;
         }
 
-        .topbar {
-            display: flex;
-            flex-direction: row;
-        }
-
         .container {
             display: flex;
             max-width: 1050px;
@@ -44,34 +39,42 @@
             color: white;
             text-align: center;
             display: block;
-            font-family: Montserrat;
-            font-size: 58px;
+            font-family:'Times New Roman', Times, serif;
+            font-size: 5rem;
             font-style: normal;
-            font-weight: 800px;
+            font-weight: 50rem;
             line-height: 80px;
             letter-spacing: 0.2px;
+            width: 573px;
+            height: 143px;
         }
 
         h4 {
             color: white;
             text-align: center;
-            display: block;
-            font-family: Montserrat;
-            font-size: 20px;
+            font-family:'Times New Roman', Times, serif;
+            font-size: 1em;
             font-style: normal;
-            font-weight: 500px;
+            width: 31em;
             line-height: 30px;
             letter-spacing: 0.2px;
+        }
+        
+        .topbar {
+            display: flex;
+            flex-direction: row;
         }
 
         .logo {
             color: white;
             padding: 14px 16px;
+            padding-right: 462px;
             text-decoration: none;
             font-size: 17px;
             padding-left: 10%;
         }
-        .logo a:hover {
+
+        .logo:hover {
             color: grey;
         }
 
@@ -97,17 +100,18 @@
 
         .imagemenu {
             float: right;
-            display:inline;
+            display:flex;
             padding-right: 10%;
         }
         .imagemenu a {
             float: right;
             display: flex;
-            color: white;
             padding: 14px 16px;
-            text-decoration: none;
             font-size: 17px;
             gap: 20px;
+        }
+        .imagemenu a:hover {
+            color: grey;
         }
         button {
             background-color: transparent;
