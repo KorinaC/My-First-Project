@@ -35,29 +35,25 @@
             margin: auto;
         }
 
-        h1 {
+        .main-content{
             color: white;
             text-align: center;
-            display: block;
-            font-family:'Times New Roman', Times, serif;
-            font-size: 5rem;
+            font-family:'Times New Roman', Times, serif; 
             font-style: normal;
+            display: block;
+            letter-spacing: 0.2px;
+        }
+        h1 {
+            font-size: 5rem;
             font-weight: 50rem;
             line-height: 80px;
-            letter-spacing: 0.2px;
             width: 573px;
-            height: 143px;
         }
 
         h4 {
-            color: white;
-            text-align: center;
-            font-family:'Times New Roman', Times, serif;
-            font-size: 1em;
-            font-style: normal;
-            width: 31em;
+            font-size: 1.5rem;
             line-height: 30px;
-            letter-spacing: 0.2px;
+            width: 530px;
         }
         
         .topbar {
@@ -79,13 +75,11 @@
         }
 
         .menu {
-            float: right;
             display:flex;
             padding-right: 10%;
         }
 
         .menu a {
-            float: left;
             display: flex;
             color: white;
             padding: 14px 16px;
@@ -99,18 +93,16 @@
         }
 
         .imagemenu {
-            float: right;
             display:flex;
             padding-right: 10%;
         }
         .imagemenu a {
-            float: right;
             display: flex;
             padding: 14px 16px;
             font-size: 17px;
             gap: 20px;
         }
-        .imagemenu a:hover {
+        .imagemenu :hover {
             color: grey;
         }
         button {
@@ -128,7 +120,7 @@
             background-color: orange;
         }
 
-        .button {
+        .button-wrapper {
             display: flex;
         }
     </style>
@@ -137,8 +129,7 @@
 </title>
 
 <body>
-    <header>
-    <div class="topbar">
+    <header class="topbar">
             <a href="#kMarketer" class="logo">KMarketer</a>
             <nav class="menu">
                 <a href="#home">Home</a>
@@ -147,15 +138,16 @@
                 <a href="#contact">Contact</a>
             </nav>
             <nav class="imagemenu"> 
-                <a><img style="float:right" src="Project materials/icn search .icn-xs.png" alt="Search" width="15"height="15"></a>
-                <a><img style="float:right" src="Project materials/btn.png" alt="Cart" width="15" height="15"></a>
+                <a><img src="Project materials/icn search .icn-xs.png" alt="Search" width="15"height="15"></a>
+                <a><img src="Project materials/btn.png" alt="Cart" width="15" height="15"></a>
             </nav>
-        </div>
     </header>
     <div class="container">
+        <div class="main-content">
         <h1>We Take Care of the Future</h1>
         <h4>We know how large objects will act, but things on a small scale just do not act that way</h4>
-        <div class="button">
+        </div>
+        <div class="button-wrapper">
             <button>Get Quote Now</button>
             <button>Learn More</button>
         </div>
