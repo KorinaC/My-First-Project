@@ -1,20 +1,48 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>KMarketer</title>
     <style>
         body {
+            margin: 0;
+            color: white;
+            font-size: 14px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .container {
+            max-width: 1028px;
+            margin: 0 auto;
+            padding: 0 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        ul {
+            padding: 0%;
+            list-style: none;
+            margin: 0%;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .top-banner {
             background-image: url("Project materials/cover.png");
-            height: 100%;
-            width: 100%;
-            background-position: center;
+            background-position-x: center;
             background-repeat: no-repeat;
             background-size: cover;
             position: relative;
+            padding: 40px 0 120px;
+            z-index: 1;
         }
 
-        body::before {
+        .top-banner::before {
             content: '';
             display: block;
             width: 100%;
@@ -26,135 +54,106 @@
             z-index: -1;
         }
 
-        .container {
+        .top-banner_header {
+            width: 100%;
             display: flex;
-            max-width: 1050px;
-            padding: 10%;
-            flex-direction: column;
             align-items: center;
-            gap: 40px;
-            margin: auto;
+            margin-bottom: 160px;
         }
 
-        .main-content {
-            color: white;
-            text-align: center;
-            font-family: 'Times New Roman', Times, serif;
-            font-style: normal;
-            display: block;
-            letter-spacing: 0.2px;
+        .header_logo {
+            font-size: 25px;
         }
 
+        .header_nav {
+            margin-left: auto;
+        }
+
+        .header_nav .nav_list {
+            display: flex;
+            gap: 20px;
+        }
+
+        .header_actions {
+            margin-left: 40px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .action_item {
+            background-color: transparent;
+            border: none;
+            display: flex;
+        }
+
+        .top_banner_content {
+            max-width: 578px;
+        }
         h1 {
             font-size: 5rem;
             font-weight: 50rem;
             line-height: 80px;
-            width: 573px;
+            text-align: center;
         }
-
         h4 {
             font-size: 1.5rem;
             line-height: 30px;
-            width: 530px;
-        }
-
-        .header {
-            display: flex;
-        }
-
-        .header_logo {
-            color: white;
-            padding: 14px 16px;
-            padding-right: 462px;
-            text-decoration: none;
-            font-size: 17px;
-            padding-left: 10%;
-        }
-
-        .header_logo:hover {
-            color: grey;
-        }
-
-        .header_nav {
-            display: flex;
-            padding-right: 10%;
-        }
-
-        .header_nav a {
-            display: flex;
-            color: white;
-            padding: 14px 16px;
-            text-decoration: none;
-            font-size: 17px;
-            gap: 20px;
-        }
-
-        .header_nav a:hover {
-            color: grey;
-        }
-
-        .header_actions {
-            display: flex;
-            background-color: transparent;
-            border: none;
-        }
-
-        .header_actions a {
-            display: flex;
-            padding: 14px 16px;
-            font-size: 17px;
-            gap: 20px;
-        }
-
-        .header_actions :hover {
-            color: grey;
-        }
-
-        button {
-            background-color: transparent;
-            color: white;
-            border-radius: 30px;
-            padding: 15px 35px;
             text-align: center;
-            text-decoration: none;
-            font-size: 16px;
-            flex-direction: row;
         }
-
-        .button-wrapper :hover {
-            background-color: orange;
-        }
-
-        .button-wrapper {
+        .top_banner_actions {
             display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+        .button {
+            padding: 10 35px;
+            line-height: 26px;
+            border-radius: 40px;
+            border: 1px solid white;
+            color: white;
+            background: transparent;
+            cursor: pointer;
+        }
+        .button--primary {
+            background-color: #FFA62B;
+            border-color: #FFA62B;
         }
     </style>
 </head>
+
 <body>
-    <section class='top-banner'>
-    <header class="header">
-        <a href="#kMarketer" class="header_logo">KMarketer</a>
-        <nav class="header_nav">
-            <a href="#home">Home</a>
-            <a href="#product">Product</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#contact">Contact</a>
-        </nav>
-        <nav class="header_actions">
-            <button><img src="Project materials/icn search .icn-xs.png" alt="Search" width="15" height="15"></button>
-            <button><img src="Project materials/btn.png" alt="Cart" width="15" height="15"></button>
-        </nav>
-    </header>
-    <div class="container">
-        <div class="main-content">
-            <h1>We Take Care of the Future</h1>
-            <h4>We know how large objects will act, but things on a small scale just do not act that way</h4>
-        </div>
-        <div class="button-wrapper">
-            <button>Get Quote Now</button>
-            <button>Learn More</button>
-        </div>
-    </div>
-</section>
+    <section class="top-banner">
+        <div class="container">
+            <header class="top-banner_header">
+                <a href="#kMarketer" class="header_logo">KMarketer</a>
+                <nav class="header_nav">
+                    <ul class="nav_list">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#product">Product</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <ul class="header_actions">
+                    <li>
+                        <button class="action_item"><img src="Project materials\search .icn-xs.svg" alt="Search"
+                                width="15" height="15"></button>
+                    </li>
+                    <li>
+                        <button class="action_item"><img src="Project materials\cart .icn-xs.svg" alt="Cart" width="15"
+                                height="15"></button>
+                    </li>
+                </ul>
+            </header>
+            <div class="top_banner_content">
+                <h1>We Take Care of the Future</h1>
+                <h4>We know how large objects will act, but things on a small scale just do not act that way</h4>
+                <div class="top_banner_actions">
+                    <button class="button button--primary">Get Quote Now</button>
+                    <button class="button button--secondary">Learn More</button>
+                </div>
+            </div>
+    </section>
 </body>
 </html>
