@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>KMarketer</title>
@@ -30,6 +29,11 @@
         a {
             color: inherit;
             text-decoration: none;
+        }
+
+        button {
+            padding: 0%;
+            cursor: pointer;
         }
 
         .top-banner {
@@ -90,32 +94,35 @@
         .top_banner_content {
             max-width: 578px;
         }
-        h1 {
+
+        #future {
             font-size: 5rem;
-            font-weight: 50rem;
             line-height: 80px;
             text-align: center;
         }
-        h4 {
+
+        #weknow {
             font-size: 1.5rem;
             line-height: 30px;
             text-align: center;
         }
+
         .top_banner_actions {
             display: flex;
             gap: 10px;
             justify-content: center;
         }
-        .button {
-            padding: 10 35px;
+
+        .bttn {
+            padding: 10px 35px;
             line-height: 26px;
             border-radius: 40px;
             border: 1px solid white;
             color: white;
             background: transparent;
-            cursor: pointer;
         }
-        .button--primary {
+
+        .bttn--primary {
             background-color: #FFA62B;
             border-color: #FFA62B;
         }
@@ -147,13 +154,14 @@
                 </ul>
             </header>
             <div class="top_banner_content">
-                <h1>We Take Care of the Future</h1>
-                <h4>We know how large objects will act, but things on a small scale just do not act that way</h4>
+                <h1 id="future">We Take Care of the Future</h1>
+                <h4 id="weknow">We know how large objects will act, but things on a small scale just do not act that way</h4>
                 <div class="top_banner_actions">
-                    <button class="button button--primary">Get Quote Now</button>
-                    <button class="button button--secondary">Learn More</button>
+                    <button class="bttn bttn--primary">Get Quote Now</button>
+                    <button class="bttn bttn--secondary">Learn More</button>
                 </div>
             </div>
+        </div>
     </section>
 </body>
 </html>
