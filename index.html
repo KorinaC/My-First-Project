@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>KMarketer</title>
@@ -83,6 +84,8 @@
             display: flex;
             align-items: center;
             gap: 20px;
+            width: 15px;
+            height: 15px;
         }
 
         .action_item {
@@ -126,6 +129,46 @@
             background-color: #FFA62B;
             border-color: #FFA62B;
         }
+
+        //@media screen and (min-width: 320px) {
+        body {
+            background-position: center;
+        }
+
+        .top-banner_header {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 1em;
+            line-height: 3em;
+        }
+
+        .nav_list {
+            margin: 0 auto;
+        }
+
+        .header_actions {
+            margin-left: 0;
+        }
+
+        #future {
+            font-size: 1.2rem;
+            line-height: 45px;
+            margin-top: 70px;
+        }
+
+        #weknow {
+            font-size: 0.6rem;
+            line-height: 20px;
+        }
+
+        .bttn {
+            padding: 10px 20px;
+            line-height: 25px;
+            font-size: 8px;
+        }
+        }
+
+        //
     </style>
 </head>
 
@@ -144,18 +187,18 @@
                 </nav>
                 <ul class="header_actions">
                     <li>
-                        <button class="action_item"><img src="Project materials\search .icn-xs.svg" alt="Search"
-                                width="15" height="15"></button>
+                        <button class="action_item"><img src="Project materials\search .icn-xs.svg"
+                                alt="Search"></button>
                     </li>
                     <li>
-                        <button class="action_item"><img src="Project materials\cart .icn-xs.svg" alt="Cart" width="15"
-                                height="15"></button>
+                        <button class="action_item"><img src="Project materials\cart .icn-xs.svg" alt="Cart"></button>
                     </li>
                 </ul>
             </header>
             <div class="top_banner_content">
                 <h1 id="future">We Take Care of the Future</h1>
-                <h4 id="weknow">We know how large objects will act, but things on a small scale just do not act that way</h4>
+                <h4 id="weknow">We know how large objects will act, but things on a small scale just do not act that way
+                </h4>
                 <div class="top_banner_actions">
                     <button class="bttn bttn--primary">Get Quote Now</button>
                     <button class="bttn bttn--secondary">Learn More</button>
@@ -163,5 +206,106 @@
             </div>
         </div>
     </section>
+    <style>
+        .why-us {
+            background: var(--dark-background-color, #252B42);
+        }
+
+        .why_us_content{
+            display: flex;
+            padding: 145px 0px;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #whyus {
+            font-family: Montserrat;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 57px;
+            letter-spacing: 0.2px;
+        }
+
+        #newtonian {
+            text-align: center;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 20px;
+            letter-spacing: 0.2px;
+            max-width: 470px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 328px 328px 328px ;
+            border: none;
+            gap: 30px;
+            padding-bottom: 100px;
+        }
+
+        .grid-item {
+            border: 1px solid #E8E8E8;
+            background: #FFF;
+            display: flex;
+            padding: 35px 40px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 15px;
+        }
+        .cardname {
+            color: var(--text-color, #252B42);
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px; 
+            letter-spacing: 0.1px;
+        }
+        #fox {
+            color: var(--second-text-color, #737373);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 20px; 
+            letter-spacing: 0.2px;
+        }
+    </style>
+    <section class="why-us">
+        <div class="container">
+            <div class="why_us_content">
+            <h2 id="whyus">WHY CHOOSE US</h2>
+            <p id="newtonian">Problems trying to resolve the conflict between the two major realms of Classical physics:
+                Newtonian mechanics</p>
+            </div>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <h5 class="cardname">Digital Marketing</h5> 
+                    <p id="fox"> the quick fox jumps over the lazy dog the quick fox jumps over the lazy dog</p>
+                </div>
+                <div class="grid-item">
+                    <h5 class="cardname">Digital Marketing</h5> 
+                    <p id="fox"> the quick fox jumps over the lazy dog the quick fox jumps over the lazy dog</p>
+                </div>
+                <div class="grid-item">
+                    <h5 class="cardname">Business Growing</h5>
+                    <p id="fox"> the quick fox jumps over the lazy dog the quick fox jumps over the lazy dog</p>
+                </div>
+                <div class="grid-item">
+                    <h5 class="cardname">National top 50 firms</h5>
+                    <p id="fox"> the quick fox jumps over the lazy dog the quick fox jumps over the lazy dog</p>
+                </div>
+                <div class="grid-item">
+                    <h5 class="cardname">National top 50 firms</h5>
+                    <p id="fox"> the quick fox jumps over the lazy dog the quick fox jumps over the lazy dog</p>
+                </div>
+                <div class="grid-item">
+                    <h5 class="cardname">Web Development</h5>
+                    <p id="fox"> the quick fox jumps over the lazy dog the quick fox jumps over the lazy dog</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </body>
 </html>
