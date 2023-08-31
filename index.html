@@ -4,12 +4,15 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>KMarketer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
             color: white;
             font-size: 14px;
-            font-family: 'Times New Roman', Times, serif;
+            font-family: "Montserrat";
         }
 
         .container {
@@ -96,18 +99,22 @@
 
         .top_banner_content {
             max-width: 578px;
+            text-align: center;
         }
 
         #future {
-            font-size: 5rem;
-            line-height: 80px;
-            text-align: center;
+            color: var(--light-text-color, #FFF);
+            font-size: 58px;
+            font-weight: 800;
+            line-height: 80px; 
+            letter-spacing: 0.2px;
+            width: 573px;
         }
 
         #weknow {
             font-size: 1.5rem;
             line-height: 30px;
-            text-align: center;
+            font-weight: normal;
         }
 
         .top_banner_actions {
@@ -125,50 +132,60 @@
             background: transparent;
         }
 
-        .bttn--primary {
+        .bttn--quote {
             background-color: #FFA62B;
             border-color: #FFA62B;
         }
 
-        //@media screen and (min-width: 320px) {
-        body {
-            background-position: center;
-        }
+        @media screen and (max-width: 570px) and (min-width: 320px) {
+            body {
+                background-position: center;
+            }
+            
+            .header_nav {
+                margin: 0 auto;
+            }
 
-        .top-banner_header {
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 1em;
-            line-height: 3em;
-        }
+            .top-banner_header {
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 1em;
+                line-height: 3em;
+            }
 
-        .nav_list {
-            margin: 0 auto;
-        }
+            .header_actions {
+                margin: 0;
+            }
+        
+            .top_banner_content {
+                margin: auto;
+                padding: 0;
+                flex-direction: column;
+            }
 
-        .header_actions {
-            margin-left: 0;
-        }
+            #future {
+                font-size: 1.2rem;
+                line-height: 45px;
+                margin-top: 70px;
+            }
 
-        #future {
-            font-size: 1.2rem;
-            line-height: 45px;
-            margin-top: 70px;
-        }
+            #weknow {
+                font-size: 0.6rem;
+                line-height: 20px;
+            }
 
-        #weknow {
-            font-size: 0.6rem;
-            line-height: 20px;
-        }
+            .bttn {
+                padding: 5px 10px;
+                line-height: 25px;
+                font-size: 8px;
+                border-radius: 20px;
+                display: grid;
+            }
 
-        .bttn {
-            padding: 10px 20px;
-            line-height: 25px;
-            font-size: 8px;
+            .bttn--learn {
+                margin-left: 8px;
+            }
         }
-        }
-
-        //
     </style>
 </head>
 
@@ -200,8 +217,8 @@
                 <h4 id="weknow">We know how large objects will act, but things on a small scale just do not act that way
                 </h4>
                 <div class="top_banner_actions">
-                    <button class="bttn bttn--primary">Get Quote Now</button>
-                    <button class="bttn bttn--secondary">Learn More</button>
+                    <button class="bttn bttn--quote">Get Quote Now</button>
+                    <button class="bttn bttn--learn">Learn More</button>
                 </div>
             </div>
         </div>
@@ -211,7 +228,7 @@
             background: var(--dark-background-color, #252B42);
         }
 
-        .why_us_content{
+        .section_title {
             display: flex;
             padding-top: 145px;
             padding-bottom: 45px;
@@ -220,15 +237,16 @@
             gap: 10px;
         }
 
-        #whyus {
+        .title_header {
             font-size: 40px;
             font-style: normal;
             font-weight: 700;
             line-height: 57px;
             letter-spacing: 0.2px;
+            text-transform: uppercase;
         }
 
-        #newtonian {
+        .title_paragraph {
             text-align: center;
             font-size: 14px;
             font-style: normal;
@@ -240,7 +258,7 @@
 
         .grid-container {
             display: grid;
-            grid-template-columns: 328px 328px 328px ;
+            grid-template-columns: 328px 328px 328px;
             border: none;
             gap: 30px;
             padding-bottom: 100px;
@@ -255,81 +273,128 @@
             align-items: flex-start;
             gap: 15px;
         }
+
         .cardname {
             color: var(--text-color, #252B42);
             font-size: 16px;
             font-style: normal;
             font-weight: 700;
-            line-height: 24px; 
+            line-height: 24px;
             letter-spacing: 0.1px;
         }
+
         .cardheading {
             display: flex;
             align-items: center;
             gap: 15px;
         }
-        #fox {
+
+        .card_body {
             color: var(--second-text-color, #737373);
             font-size: 14px;
             font-style: normal;
             font-weight: 500;
-            line-height: 20px; 
+            line-height: 20px;
             letter-spacing: 0.2px;
         }
     </style>
     <section class="why-us">
         <div class="container">
-            <div class="why_us_content">
-            <h2 id="whyus">WHY CHOOSE US</h2>
-            <p id="newtonian">Problems trying to resolve the conflict between the two major realms of Classical physics:
-                Newtonian mechanics</p>
+            <div class="section_title">
+                <h2 class="title_header">Why choose us</h2>
+                <p class="title_paragraph">Problems trying to resolve the conflict between the two major realms of
+                    Classical physics:Newtonian mechanics</p>
             </div>
             <div class="grid-container">
                 <div class="grid-item">
                     <div class="cardheading">
-                    <img src="Project materials\bag .icn-lg.svg" alt="Bag">
-                    <h5 class="cardname">Digital Marketing</h5> 
+                        <img src="Project materials\bag .icn-lg.svg" alt="Bag">
+                        <h5 class="cardname">Digital Marketing</h5>
                     </div>
-                    <p id="fox"> the quick fox jumps over the lazy dog the quick fox jumps over the lazy dog</p>
+                    <p class="card_body"> the quick fox jumps over the lazy dog the quick fox jumps over the lazy dog
+                    </p>
                 </div>
                 <div class="grid-item">
                     <div class="cardheading">
-                    <img src="Project materials\market .icn-lg.svg" alt="Market">
-                    <h5 class="cardname">Digital Marketing</h5> 
+                        <img src="Project materials\market .icn-lg.svg" alt="Market">
+                        <h5 class="cardname">Digital Marketing</h5>
                     </div>
-                    <p id="fox"> the quick fox jumps over the lazy dog the quick fox jumps over the lazy dog</p>
+                    <p class="card_body"> the quick fox jumps over the lazy dog the quick fox jumps over the lazy dog
+                    </p>
                 </div>
                 <div class="grid-item">
                     <div class="cardheading">
-                    <img src="Project materials\note book .icn-lg.svg" alt="Notebook">
-                    <h5 class="cardname">Business Growing</h5>
+                        <img src="Project materials\note book .icn-lg.svg" alt="Notebook">
+                        <h5 class="cardname">Business Growing</h5>
                     </div>
-                    <p id="fox"> the quick fox jumps over the lazy dog the quick fox jumps over the lazy dog</p>
+                    <p class="card_body"> the quick fox jumps over the lazy dog the quick fox jumps over the lazy dog
+                    </p>
                 </div>
                 <div class="grid-item">
                     <div class="cardheading">
-                    <img src="Project materials\people .icn-lg.svg" alt="People">
-                    <h5 class="cardname">National top 50 firms</h5>
+                        <img src="Project materials\people .icn-lg.svg" alt="People">
+                        <h5 class="cardname">National top 50 firms</h5>
                     </div>
-                    <p id="fox"> the quick fox jumps over the lazy dog the quick fox jumps over the lazy dog</p>
+                    <p class="card_body"> the quick fox jumps over the lazy dog the quick fox jumps over the lazy dog
+                    </p>
                 </div>
                 <div class="grid-item">
                     <div class="cardheading">
-                    <img src="Project materials\diagram .icn-lg.svg" alt="Diagram">
-                    <h5 class="cardname">National top 50 firms</h5>
+                        <img src="Project materials\diagram .icn-lg.svg" alt="Diagram">
+                        <h5 class="cardname">National top 50 firms</h5>
                     </div>
-                    <p id="fox"> the quick fox jumps over the lazy dog the quick fox jumps over the lazy dog</p>
+                    <p class="card_body"> the quick fox jumps over the lazy dog the quick fox jumps over the lazy dog
+                    </p>
                 </div>
                 <div class="grid-item">
                     <div class="cardheading">
-                    <img src="Project materials\medal .icn-lg.svg" alt="Medal">
-                    <h5 class="cardname">Web Development</h5>
+                        <img src="Project materials\medal .icn-lg.svg" alt="Medal">
+                        <h5 class="cardname">Web Development</h5>
                     </div>
-                    <p id="fox"> the quick fox jumps over the lazy dog the quick fox jumps over the lazy dog</p>
+                    <p class="card_body"> the quick fox jumps over the lazy dog the quick fox jumps over the lazy dog
+                    </p>
                 </div>
             </div>
         </div>
     </section>
+    <footer class="footer">
+        <section class="footer_primary">
+            <div class="container">
+                <div class="footer_content">
+                    <a href="#kMarketer" class="header_logo">KMarketer</a>
+                    <ul class="footer_socials">
+                        <li>
+                            <a href="#facebook"class="social_links"></a> 
+                            <img src="Project materials\facebook-filled.svg" alt="Facebook_logo" class="socials_logo">              
+                         </li>
+                         <li>
+                            <a href="#facebook"class="social_links"></a> 
+                            <img src="Project materials\instagram-outlined.svg" alt="Instagram_logo" class="socials_logo">              
+                         </li>
+                         <li>
+                            <a href="#facebook"class="social_links"></a> 
+                            <img src="Project materials\twitter-outlined.svg" alt="Tweeter_logo" class="socials_logo">              
+                         </li>
+                         <li>
+                            <a href="#facebook"class="social_links"></a> 
+                            <img src="Project materials\youtube.svg" alt="Youtube_logo" class="socials_logo">              
+                         </li>
+                    </ul>
+                    <hr class="footer_divider">
+                    <div class="footer_main">
+                        <nav class="footer_nav">
+                            <div class="nav_block">
+                                <h4 class="footer-main_title">
+                                
+                                </h4>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
 
 </body>
+
 </html>
