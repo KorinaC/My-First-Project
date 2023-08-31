@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <style>
         body {
+            --bttn-primary-bg:#FFA62B;
             margin: 0;
             color: white;
             font-size: 14px;
@@ -82,6 +83,10 @@
             gap: 20px;
         }
 
+        .nav_list a:hover {
+         text-decoration: underline;
+        }
+
         .header_actions {
             margin-left: 40px;
             display: flex;
@@ -132,9 +137,9 @@
             background: transparent;
         }
 
-        .bttn--quote {
-            background-color: #FFA62B;
-            border-color: #FFA62B;
+        .bttn--primary {
+            background-color: var(--bttn-primary-bg);
+            border-color: var(--bttn-primary-bg);
         }
 
         @media screen and (max-width: 570px) and (min-width: 320px) {
@@ -212,7 +217,7 @@
                 <h4 id="weknow">We know how large objects will act, but things on a small scale just do not act that way
                 </h4>
                 <div class="top_banner_actions">
-                    <button class="bttn bttn--quote">Get Quote Now</button>
+                    <button class="bttn bttn--primary">Get Quote Now</button>
                     <button class="bttn bttn--learn">Learn More</button>
                 </div>
             </div>
@@ -352,6 +357,101 @@
             </div>
         </div>
     </section>
+    <style>
+     .footer {
+        --footer-bg:#252842;
+        --footer-second-bg:#16697A;
+        --footer-divider-bg:#364867;
+        --footer-nav-link: #BDBDBD;
+        background-color: var(--footer-bg) ;
+     }
+    
+     .footer_secondary {
+        background-color: var(--footer-second-bg);
+     }
+
+     .footer_content {
+        width:100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas: 'logo socials'
+                             'divider divider'
+                             'main main'
+     }
+
+     .footer_logo {
+        grid-area: logo;
+        margin: 40px 0;
+     }
+     .logo__img {
+        height: 24px;
+     }
+     .footer_socials {
+        grid-area: socials;
+        margin: 40px 0;
+        display: flex;
+        gap: 28px;
+        align-items: center;
+        justify-self: end;
+     }
+     .social_links {
+        display: flex;
+     }
+     .footer_divider {
+        grid-area: divider;
+        width: 100%;
+        border: none;
+        height: 1px;
+        background-color: var(--footer-divider-bg);
+        margin: 0;
+     }
+     .footer_main {
+        grid-area: main;
+        display: flex;
+        gap: 38px;
+        margin: 70px 0;
+     }
+     .footer_nav {
+        display: flex;
+        gap: 38px;
+     }
+     .footer-main_title {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      margin-top: 0;
+     }
+     .footer_nav .nav_list {
+        display: flex;
+        flex-direction: column;
+        gap:10px;
+     }
+     .footer_nav .nav_list a {
+        font-weight: 500;
+        color: var(--footer-nav-link);
+     }
+     .subscription_form {
+        display:flex;
+        border: 1px solid #F6E6E6;
+        border-radius: 5px;
+     }
+     .subscription_form .form_input {
+        height: 58px;
+        background-color: white;
+        border: none;
+     }
+     .subscription_form .form_submit {
+        border: none;
+        background-color: var(--bttn-primary-bg);
+        color: white;
+        font-family: "Montserrat";
+        letter-spacing: 1px;
+        padding: 0 22px;
+     }
+
+    </style>
     <footer class="footer">
         <section class="footer_primary">
             <div class="container">
@@ -429,12 +529,29 @@
                                     </li>
                                 </ul>
                             </div>
+                            <div class="nav_block">
+                                <h4 class="footer-main_title">Resources</h4>
+                                <ul class="nav_list">
+                                    <li class="nav_list-item">
+                                       <a href="#aboutus">IOS & Android</a> 
+                                    </li>
+                                    <li class="nav_list-item">
+                                        <a href="#carrier">Watch a Demo</a> 
+                                    </li>
+                                    <li class="nav_list-item">
+                                        <a href="#hiring">Customers</a> 
+                                    </li>
+                                    <li class="nav_list-item">
+                                        <a href="#blog">API</a> 
+                                    </li>
+                                </ul>
+                            </div>
                         </nav>
                         <div class="footer_subscription">
-                            <h4 class="footer-main__title">Get in touch</h4>
-                            <form action="submit">
-                                <input type="email">
-                                <input type="submit">
+                            <h4 class="footer-main_title">Get in touch</h4>
+                            <form class ="subscription_form" action="submit">
+                                <input class="form_input" type="email">
+                                <input class="form_submit" type="submit" value="Subscribe">
                             </form>
                             <p>Lorem impsum dolor amit</p>
                         </div>
@@ -442,8 +559,11 @@
                 </div>
             </div>
         </section>
+        <section class="footer_secondary">
+            <div class="container">
+                <p>Made With Love By Figmaland All Right Reserved</p>
+            </div>
+        </section>
     </footer>
-
 </body>
-
 </html>
