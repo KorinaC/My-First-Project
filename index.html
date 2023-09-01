@@ -147,7 +147,9 @@
             body {
                 background-position: center;
             }
-
+            .container {
+                padding: 0 40px;
+            }
             .top-banner {
                 padding: 30px 0 100px;
             }
@@ -196,7 +198,6 @@
                 gap: 25px;
             }
         }
-
         .why-us {
             background: var(--dark-background-color, #252B42);
         }
@@ -400,6 +401,37 @@
             font-size: 12px;
             color: var(--footer-nav-link);
             font-size: 12px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .footer_divider {
+                display: none;
+            }
+
+            .footer_content {
+                grid-template-areas:'logo'
+                                    'socials'
+                                    'main';
+                gap: 50px;
+                padding: 50px 0 70px;
+            }
+            .footer_main {
+                flex-direction: column;
+                margin:0;
+            }
+            .footer_nav {
+                flex-direction: column;
+            }
+            .footer_socials {
+                margin: 0;
+                justify-self: initial;
+            }
+            .footer_logo {
+                margin:0;
+            }
+            .footer_secondary {
+                text-align: center;
+            }
         }
     </style>
 </head>
