@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <style>
         body {
-            --bttn-primary-bg:#FFA62B;
+            --bttn-primary-bg: #FFA62B;
             margin: 0;
             color: white;
             font-size: 14px;
@@ -84,7 +84,7 @@
         }
 
         .nav_list a:hover {
-         text-decoration: underline;
+            text-decoration: underline;
         }
 
         .header_actions {
@@ -111,7 +111,7 @@
             color: var(--light-text-color, #FFF);
             font-size: 58px;
             font-weight: 800;
-            line-height: 80px; 
+            line-height: 80px;
             letter-spacing: 0.2px;
             width: 573px;
         }
@@ -146,7 +146,7 @@
             body {
                 background-position: center;
             }
-            
+
             .header_nav {
                 margin-left: 0;
             }
@@ -157,11 +157,18 @@
                 margin-bottom: 1em;
                 line-height: 3em;
             }
-
+            
             .header_actions {
                 margin: 0;
             }
-
+            
+            .top_banner_content {
+                display: flex;
+                width: 418px;
+                flex-direction: column;
+                align-items: center;
+                gap: 40px;
+            }
             #future {
                 font-size: 1.2rem;
                 line-height: 45px;
@@ -169,61 +176,26 @@
             }
 
             #weknow {
-                font-size: 0.6rem;
-                line-height: 10px;
-                display: block;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 30px;
+                letter-spacing: 0.2px;
+                text-align: center;
             }
 
-            .bttn {
-                padding: 5px 10px;
-                line-height: 25px;
-                font-size: 8px;
-                border-radius: 20px;
-                display: grid;
+            .top_banner_actions {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 25px;
             }
-
+            
             .bttn--learn {
                 margin-left: 8px;
             }
         }
-    </style>
-</head>
 
-<body>
-    <section class="top-banner">
-        <div class="container">
-            <header class="top-banner_header">
-                <a href="#kMarketer" class="header_logo">KMarketer</a>
-                <nav class="header_nav">
-                    <ul class="nav_list">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#product">Product</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
-                <ul class="header_actions">
-                    <li>
-                        <button class="action_item"><img src="Project materials\search .icn-xs.svg"
-                                alt="Search"></button>
-                    </li>
-                    <li>
-                        <button class="action_item"><img src="Project materials\cart .icn-xs.svg" alt="Cart"></button>
-                    </li>
-                </ul>
-            </header>
-            <div class="top_banner_content">
-                <h1 id="future">We Take Care of the Future</h1>
-                <h4 id="weknow">We know how large objects will act, but things on a small scale just do not act that way
-                </h4>
-                <div class="top_banner_actions">
-                    <button class="bttn bttn--primary">Get Quote Now</button>
-                    <button class="bttn bttn--learn">Learn More</button>
-                </div>
-            </div>
-        </div>
-    </section>
-    <style>
         .why-us {
             background: var(--dark-background-color, #252B42);
         }
@@ -271,7 +243,6 @@
             padding: 35px 40px;
             flex-direction: column;
             align-items: flex-start;
-            gap: 15px;
         }
 
         .cardname {
@@ -287,6 +258,7 @@
             display: flex;
             align-items: center;
             gap: 15px;
+            margin-bottom: 15px;
         }
 
         .card_body {
@@ -297,7 +269,150 @@
             line-height: 20px;
             letter-spacing: 0.2px;
         }
+
+        .footer {
+            --footer-bg: #252842;
+            --footer-second-bg: #16697A;
+            --footer-divider-bg: #364867;
+            --footer-nav-link: #BDBDBD;
+            background-color: var(--footer-bg);
+        }
+
+        .footer_secondary {
+            background-color: var(--footer-second-bg);
+        }
+
+        .footer_content {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
+            grid-template-areas: 'logo socials'
+                                 'divider divider'
+                                 'main main';
+        }
+
+        .footer_logo {
+            grid-area: logo;
+            margin: 40px 0;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .logo__img {
+            height: 24px;
+        }
+
+        .footer_socials {
+            grid-area: socials;
+            margin: 40px 0;
+            display: flex;
+            gap: 28px;
+            align-items: center;
+            justify-self: end;
+        }
+
+        .social_links {
+            display: flex;
+        }
+
+        .footer_divider {
+            grid-area: divider;
+            width: 100%;
+            border: none;
+            height: 1px;
+            background-color: var(--footer-divider-bg);
+            margin: 0;
+        }
+
+        .footer_main {
+            grid-area: main;
+            display: flex;
+            gap: 38px;
+            margin: 70px 0;
+        }
+
+        .footer_nav {
+            display: flex;
+            gap: 38px;
+        }
+
+        .footer-main_title {
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            margin-top: 0;
+        }
+
+        .footer_nav .nav_list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer_nav .nav_list a {
+            font-weight: 500;
+            color: var(--footer-nav-link);
+        }
+
+        .subscription_form {
+            display: flex;
+            border: 1px solid #F6E6E6;
+            border-radius: 5px;
+        }
+
+        .subscription_form .form_input {
+            height: 58px;
+            background-color: white;
+            border: none;
+        }
+
+        .subscription_form .form_submit {
+            border: none;
+            background-color: var(--bttn-primary-bg);
+            color: white;
+            font-family: "Montserrat";
+            letter-spacing: 1px;
+            padding: 0 22px;
+        }
     </style>
+</head>
+
+<body>
+    <section class="top-banner">
+        <div class="container">
+            <header class="top-banner_header">
+                <a href="#kMarketer" class="header_logo">KMarketer</a>
+                <nav class="header_nav">
+                    <ul class="nav_list">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#product">Product</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <ul class="header_actions">
+                    <li>
+                        <button class="action_item"><img src="Project materials\search .icn-xs.svg"
+                                alt="Search"></button>
+                    </li>
+                    <li>
+                        <button class="action_item"><img src="Project materials\cart .icn-xs.svg" alt="Cart"></button>
+                    </li>
+                </ul>
+            </header>
+            <div class="top_banner_content">
+                <h1 id="future">We Take Care of the Future</h1>
+                <h4 id="weknow">We know how large objects will act, but things on a small scale just do not act that way
+                </h4>
+                <div class="top_banner_actions">
+                    <button class="bttn bttn--primary">Get Quote Now</button>
+                    <button class="bttn bttn--learn">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="why-us">
         <div class="container">
             <div class="section_title">
@@ -357,123 +472,29 @@
             </div>
         </div>
     </section>
-    <style>
-     .footer {
-        --footer-bg:#252842;
-        --footer-second-bg:#16697A;
-        --footer-divider-bg:#364867;
-        --footer-nav-link: #BDBDBD;
-        background-color: var(--footer-bg) ;
-     }
-    
-     .footer_secondary {
-        background-color: var(--footer-second-bg);
-     }
-
-     .footer_content {
-        width:100%;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: auto;
-        grid-template-areas: 'logo socials'
-                             'divider divider'
-                             'main main'
-     }
-
-     .footer_logo {
-        grid-area: logo;
-        margin: 40px 0;
-     }
-     .logo__img {
-        height: 24px;
-     }
-     .footer_socials {
-        grid-area: socials;
-        margin: 40px 0;
-        display: flex;
-        gap: 28px;
-        align-items: center;
-        justify-self: end;
-     }
-     .social_links {
-        display: flex;
-     }
-     .footer_divider {
-        grid-area: divider;
-        width: 100%;
-        border: none;
-        height: 1px;
-        background-color: var(--footer-divider-bg);
-        margin: 0;
-     }
-     .footer_main {
-        grid-area: main;
-        display: flex;
-        gap: 38px;
-        margin: 70px 0;
-     }
-     .footer_nav {
-        display: flex;
-        gap: 38px;
-     }
-     .footer-main_title {
-      font-size: 16px;
-      line-height: 24px;
-      font-weight: 700;
-      margin-bottom: 20px;
-      margin-top: 0;
-     }
-     .footer_nav .nav_list {
-        display: flex;
-        flex-direction: column;
-        gap:10px;
-     }
-     .footer_nav .nav_list a {
-        font-weight: 500;
-        color: var(--footer-nav-link);
-     }
-     .subscription_form {
-        display:flex;
-        border: 1px solid #F6E6E6;
-        border-radius: 5px;
-     }
-     .subscription_form .form_input {
-        height: 58px;
-        background-color: white;
-        border: none;
-     }
-     .subscription_form .form_submit {
-        border: none;
-        background-color: var(--bttn-primary-bg);
-        color: white;
-        font-family: "Montserrat";
-        letter-spacing: 1px;
-        padding: 0 22px;
-     }
-
-    </style>
     <footer class="footer">
         <section class="footer_primary">
             <div class="container">
                 <div class="footer_content">
-                    <a href="#kMarketer" class="header_logo">KMarketer</a>
+                    <a href="#kMarketer" class="footer_logo">KMarketer</a>
                     <ul class="footer_socials">
                         <li>
-                            <a href="#facebook"class="social_links"></a> 
-                            <img src="Project materials\facebook-filled.svg" alt="Facebook_logo" class="socials_logo">              
-                         </li>
-                         <li>
-                            <a href="#facebook"class="social_links"></a> 
-                            <img src="Project materials\instagram-outlined.svg" alt="Instagram_logo" class="socials_logo">              
-                         </li>
-                         <li>
-                            <a href="#facebook"class="social_links"></a> 
-                            <img src="Project materials\twitter-outlined.svg" alt="Tweeter_logo" class="socials_logo">              
-                         </li>
-                         <li>
-                            <a href="#facebook"class="social_links"></a> 
-                            <img src="Project materials\youtube.svg" alt="Youtube_logo" class="socials_logo">              
-                         </li>
+                            <a href="#facebook" class="social_links"></a>
+                            <img src="Project materials\facebook-filled.svg" alt="Facebook_logo" class="socials_logo">
+                        </li>
+                        <li>
+                            <a href="#facebook" class="social_links"></a>
+                            <img src="Project materials\instagram-outlined.svg" alt="Instagram_logo"
+                                class="socials_logo">
+                        </li>
+                        <li>
+                            <a href="#facebook" class="social_links"></a>
+                            <img src="Project materials\twitter-outlined.svg" alt="Tweeter_logo" class="socials_logo">
+                        </li>
+                        <li>
+                            <a href="#facebook" class="social_links"></a>
+                            <img src="Project materials\youtube.svg" alt="Youtube_logo" class="socials_logo">
+                        </li>
                     </ul>
                     <hr class="footer_divider">
                     <div class="footer_main">
@@ -482,16 +503,16 @@
                                 <h4 class="footer-main_title">Company Info</h4>
                                 <ul class="nav_list">
                                     <li class="nav_list-item">
-                                       <a href="#aboutus">About us</a> 
+                                        <a href="#aboutus">About us</a>
                                     </li>
                                     <li class="nav_list-item">
-                                        <a href="#carrier">Carrier</a> 
+                                        <a href="#carrier">Carrier</a>
                                     </li>
                                     <li class="nav_list-item">
-                                        <a href="#hiring">We are hirig</a> 
+                                        <a href="#hiring">We are hirig</a>
                                     </li>
                                     <li class="nav_list-item">
-                                        <a href="#blog">Blog</a> 
+                                        <a href="#blog">Blog</a>
                                     </li>
                                 </ul>
                             </div>
@@ -499,16 +520,16 @@
                                 <h4 class="footer-main_title">Legal</h4>
                                 <ul class="nav_list">
                                     <li class="nav_list-item">
-                                       <a href="#aboutus">About us</a> 
+                                        <a href="#aboutus">About us</a>
                                     </li>
                                     <li class="nav_list-item">
-                                        <a href="#carrier">Carrier</a> 
+                                        <a href="#carrier">Carrier</a>
                                     </li>
                                     <li class="nav_list-item">
-                                        <a href="#hiring">We are hirig</a> 
+                                        <a href="#hiring">We are hirig</a>
                                     </li>
                                     <li class="nav_list-item">
-                                        <a href="#blog">Blog</a> 
+                                        <a href="#blog">Blog</a>
                                     </li>
                                 </ul>
                             </div>
@@ -516,16 +537,16 @@
                                 <h4 class="footer-main_title">Features</h4>
                                 <ul class="nav_list">
                                     <li class="nav_list-item">
-                                       <a href="#aboutus">Bussiness Marketing</a> 
+                                        <a href="#aboutus">Bussiness Marketing</a>
                                     </li>
                                     <li class="nav_list-item">
-                                        <a href="#carrier">User Analytic</a> 
+                                        <a href="#carrier">User Analytic</a>
                                     </li>
                                     <li class="nav_list-item">
-                                        <a href="#hiring">Live Chat</a> 
+                                        <a href="#hiring">Live Chat</a>
                                     </li>
                                     <li class="nav_list-item">
-                                        <a href="#blog">Unlimited Support</a> 
+                                        <a href="#blog">Unlimited Support</a>
                                     </li>
                                 </ul>
                             </div>
@@ -533,23 +554,23 @@
                                 <h4 class="footer-main_title">Resources</h4>
                                 <ul class="nav_list">
                                     <li class="nav_list-item">
-                                       <a href="#aboutus">IOS & Android</a> 
+                                        <a href="#aboutus">IOS & Android</a>
                                     </li>
                                     <li class="nav_list-item">
-                                        <a href="#carrier">Watch a Demo</a> 
+                                        <a href="#carrier">Watch a Demo</a>
                                     </li>
                                     <li class="nav_list-item">
-                                        <a href="#hiring">Customers</a> 
+                                        <a href="#hiring">Customers</a>
                                     </li>
                                     <li class="nav_list-item">
-                                        <a href="#blog">API</a> 
+                                        <a href="#blog">API</a>
                                     </li>
                                 </ul>
                             </div>
                         </nav>
                         <div class="footer_subscription">
                             <h4 class="footer-main_title">Get in touch</h4>
-                            <form class ="subscription_form" action="submit">
+                            <form class="subscription_form" action="submit">
                                 <input class="form_input" type="email">
                                 <input class="form_submit" type="submit" value="Subscribe">
                             </form>
@@ -566,4 +587,5 @@
         </section>
     </footer>
 </body>
+
 </html>
