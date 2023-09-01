@@ -13,7 +13,7 @@
             margin: 0;
             color: white;
             font-size: 14px;
-            font-family: "Montserrat";
+            font-family: 'Montserrat';
         }
 
         .container {
@@ -105,12 +105,13 @@
         .top_banner_content {
             max-width: 578px;
             text-align: center;
+            margin: 0 0 40px;
         }
 
         #future {
             color: var(--light-text-color, #FFF);
             font-size: 58px;
-            font-weight: 800;
+            font-weight: 900;
             line-height: 80px;
             letter-spacing: 0.2px;
             width: 573px;
@@ -142,9 +143,13 @@
             border-color: var(--bttn-primary-bg);
         }
 
-        @media screen and (max-width: 570px) and (min-width: 320px) {
+        @media screen and (max-width: 768px) {
             body {
                 background-position: center;
+            }
+
+            .top-banner {
+                padding: 30px 0 100px;
             }
 
             .header_nav {
@@ -159,29 +164,29 @@
             }
             
             .header_actions {
-                margin: 0;
+                margin-left: 0;
             }
             
             .top_banner_content {
                 display: flex;
-                width: 418px;
                 flex-direction: column;
                 align-items: center;
+                text-align: center;
                 gap: 40px;
             }
             #future {
-                font-size: 1.2rem;
+                font-size: 40px;
                 line-height: 45px;
                 margin-top: 70px;
+                width: auto;
             }
 
             #weknow {
                 font-size: 20px;
-                font-style: normal;
                 font-weight: 500;
                 line-height: 30px;
                 letter-spacing: 0.2px;
-                text-align: center;
+               
             }
 
             .top_banner_actions {
@@ -189,10 +194,6 @@
                 flex-direction: column;
                 align-items: center;
                 gap: 25px;
-            }
-            
-            .bttn--learn {
-                margin-left: 8px;
             }
         }
 
@@ -213,6 +214,7 @@
             font-size: 40px;
             font-style: normal;
             font-weight: 700;
+            margin-bottom: 0;
             line-height: 57px;
             letter-spacing: 0.2px;
             text-transform: uppercase;
@@ -252,13 +254,20 @@
             font-weight: 700;
             line-height: 24px;
             letter-spacing: 0.1px;
+            padding: 0;
         }
 
         .cardheading {
             display: flex;
             align-items: center;
             gap: 15px;
-            margin-bottom: 15px;
+            height: auto;
+            padding:0;
+        }
+        .icons {
+            width: 48px;
+            height: 47.415px;
+            flex-shrink: 0;
         }
 
         .card_body {
@@ -340,7 +349,7 @@
         .footer-main_title {
             font-size: 16px;
             line-height: 24px;
-            font-weight: 700;
+            font-weight: 600;
             margin-bottom: 20px;
             margin-top: 0;
         }
@@ -355,18 +364,29 @@
             font-weight: 500;
             color: var(--footer-nav-link);
         }
+        .footer_subscription {
+            flex-grow: 1;
+        }
 
         .subscription_form {
             display: flex;
             border: 1px solid #F6E6E6;
             border-radius: 5px;
+            width: 100%;
+            font-family: "Montserrat";
         }
 
         .subscription_form .form_input {
             height: 58px;
             background-color: white;
             border: none;
+            flex-grow: 1;
+            padding: 0 20px;
         }
+         input::placeholder {
+            color: var(--footer-nav-link);
+            font-size: 14px;
+         }
 
         .subscription_form .form_submit {
             border: none;
@@ -375,6 +395,11 @@
             font-family: "Montserrat";
             letter-spacing: 1px;
             padding: 0 22px;
+        }
+        .subscription_comment {
+            font-size: 12px;
+            color: var(--footer-nav-link);
+            font-size: 12px;
         }
     </style>
 </head>
@@ -418,12 +443,12 @@
             <div class="section_title">
                 <h2 class="title_header">Why choose us</h2>
                 <p class="title_paragraph">Problems trying to resolve the conflict between the two major realms of
-                    Classical physics:Newtonian mechanics</p>
+                    Classical physics: Newtonian mechanics</p>
             </div>
             <div class="grid-container">
                 <div class="grid-item">
                     <div class="cardheading">
-                        <img src="Project materials\bag .icn-lg.svg" alt="Bag">
+                        <img src="Project materials\bag .icn-lg.svg" alt="Bag" class="icons">
                         <h5 class="cardname">Digital Marketing</h5>
                     </div>
                     <p class="card_body"> the quick fox jumps over the lazy dog the quick fox jumps over the lazy dog
@@ -431,7 +456,7 @@
                 </div>
                 <div class="grid-item">
                     <div class="cardheading">
-                        <img src="Project materials\market .icn-lg.svg" alt="Market">
+                        <img src="Project materials\market .icn-lg.svg" alt="Market" class="icons">
                         <h5 class="cardname">Digital Marketing</h5>
                     </div>
                     <p class="card_body"> the quick fox jumps over the lazy dog the quick fox jumps over the lazy dog
@@ -439,7 +464,7 @@
                 </div>
                 <div class="grid-item">
                     <div class="cardheading">
-                        <img src="Project materials\note book .icn-lg.svg" alt="Notebook">
+                        <img src="Project materials\note book .icn-lg.svg" alt="Notebook" class="icons">
                         <h5 class="cardname">Business Growing</h5>
                     </div>
                     <p class="card_body"> the quick fox jumps over the lazy dog the quick fox jumps over the lazy dog
@@ -447,7 +472,7 @@
                 </div>
                 <div class="grid-item">
                     <div class="cardheading">
-                        <img src="Project materials\people .icn-lg.svg" alt="People">
+                        <img src="Project materials\people .icn-lg.svg" alt="People" class="icons">
                         <h5 class="cardname">National top 50 firms</h5>
                     </div>
                     <p class="card_body"> the quick fox jumps over the lazy dog the quick fox jumps over the lazy dog
@@ -455,7 +480,7 @@
                 </div>
                 <div class="grid-item">
                     <div class="cardheading">
-                        <img src="Project materials\diagram .icn-lg.svg" alt="Diagram">
+                        <img src="Project materials\diagram .icn-lg.svg" alt="Diagram" class="icons">
                         <h5 class="cardname">National top 50 firms</h5>
                     </div>
                     <p class="card_body"> the quick fox jumps over the lazy dog the quick fox jumps over the lazy dog
@@ -463,7 +488,7 @@
                 </div>
                 <div class="grid-item">
                     <div class="cardheading">
-                        <img src="Project materials\medal .icn-lg.svg" alt="Medal">
+                        <img src="Project materials\medal .icn-lg.svg" alt="Medal" class="icons">
                         <h5 class="cardname">Web Development</h5>
                     </div>
                     <p class="card_body"> the quick fox jumps over the lazy dog the quick fox jumps over the lazy dog
@@ -571,10 +596,10 @@
                         <div class="footer_subscription">
                             <h4 class="footer-main_title">Get in touch</h4>
                             <form class="subscription_form" action="submit">
-                                <input class="form_input" type="email">
+                                <input class="form_input" type="email" placeholder="Your Email">
                                 <input class="form_submit" type="submit" value="Subscribe">
                             </form>
-                            <p>Lorem impsum dolor amit</p>
+                            <p class="subscription_comment">Lorem impsum dolor amit</p>
                         </div>
                     </div>
                 </div>
