@@ -147,9 +147,7 @@
             body {
                 background-position: center;
             }
-            .container {
-                padding: 0 40px;
-            }
+
             .top-banner {
                 padding: 30px 0 100px;
             }
@@ -431,6 +429,19 @@
             }
             .footer_secondary {
                 text-align: center;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 100%;
+                flex-direction: column;
+                padding: 0px 40px 73px 40px;
+                
+            }
+            .section_title {
+                padding: 75px 40px 45px ;
+                flex-direction: column;
+                align-items: center;
             }
         }
     </style>
