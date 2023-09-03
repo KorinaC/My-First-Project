@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KMarketer</title>
+    <style>
+        body {
+            --bttn-primary-bg: #FFA62B;
+            margin: 0;
+            color: white;
+            font-size: 14px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .container {
+            max-width: 1028px;
+            margin: 0 auto;
+            padding: 0 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        ul {
+            padding: 0%;
+            list-style: none;
+            margin: 0%;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button {
+            padding: 0%;
+            cursor: pointer;
+        }
+
+        .top-banner {
+            background-image: url("Project materials/cover.png");
+            background-position-x: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            padding: 40px 0 120px;
+            z-index: 1;
+        }
+
+        .top-banner::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+
+        .top-banner_header {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            margin-bottom: 160px;
+        }
+
+        .header_logo {
+            font-size: 25px;
+        }
+
+        .header_nav {
+            margin-left: auto;
+        }
+
+        .header_nav .nav_list {
+            display: flex;
+            gap: 20px;
+        }
+
+        .header_actions {
+            margin-left: 40px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            width: 15px;
+            height: 15px;
+
+        }
+
+        .action_item {
+            background-color: transparent;
+            border: none;
+            display: flex;
+        }
+
+        .top_banner_content {
+            max-width: 578px;
+            text-align: center;
+            margin: 0 0 40px;
+
+        }
+
+        #future {
+            font-size: 58px;
+            line-height: 80px;
+            text-align: center;
+        }
+
+        #weknow {
+            font-size: 1.5rem;
+            line-height: 30px;
+            text-align: center;
+        }
+
+        .top_banner_actions {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .bttn {
+            padding: 10px 35px;
+            line-height: 26px;
+            border-radius: 40px;
+            border: 1px solid white;
+            color: white;
+            background: transparent;
+        }
+
+        .bttn--primary {
+            background-color: #FFA62B;
+            border-color: #FFA62B;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="top-banner">
+        <div class="container">
+            <header class="top-banner_header">
+                <a href="#kMarketer" class="header_logo">KMarketer</a>
+                <nav class="header_nav">
+                    <ul class="nav_list">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#product">Product</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <ul class="header_actions">
+                    <li>
+                        <button class="action_item"><img src="Project materials\search .icn-xs.svg" alt="Search"> </button>
+                    </li>
+                    <li>
+                        <button class="action_item"><img src="Project materials\cart .icn-xs.svg" alt="Cart" > </button>
+                    </li>
+                </ul>
+            </header>
+            <div class="top_banner_content">
+                <h1 id="future">We Take Care of the Future</h1>
+                <h4 id="weknow">We know how large objects will act, but things on a small scale just do not act that way</h4>
+                <div class="top_banner_actions">
+                    <button class="bttn bttn--primary">Get Quote Now</button>
+                    <button class="bttn bttn--secondary">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
