@@ -288,13 +288,16 @@
             margin: auto;
         }
         @media screen and (max-width: 768px) {
-            .grid-container {
+           .grid-container {
                 grid-template-columns: 100%;
                 flex-direction: column;
-                padding: 0px 40px 73px 40px;
-                
             }
-            .section_title {
+
+            .why-us .grid-container {
+                padding: 0px 40px 73px 40px;
+            }
+
+            .why-us .section_title {
                 padding: 75px 40px 45px ;
                 flex-direction: column;
                 align-items: center;
@@ -388,6 +391,21 @@
         }
         
         @media screen and (max-width: 768px) {
+            .clients-say {
+                padding: 0;
+            }
+
+            .clients-say .container {
+                gap: 0;
+            }
+            .card-content {
+                width: auto;
+            }
+    
+            .clients-say .grid-container {
+                padding: 0px 40px 73px 40px;
+            }
+
             .section_title {
                 padding: 75px 40px 45px;
                 flex-direction: column;
