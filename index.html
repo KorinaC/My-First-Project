@@ -203,11 +203,14 @@
 
         .section_title {
             display: flex;
-            padding-top: 145px;
-            padding-bottom: 45px;
             flex-direction: column;
             align-items: center;
             gap: 10px;
+        }
+
+        .why-us .section_title {
+            padding-top: 145px;
+            padding-bottom: 45px;
         }
 
         .title_header {
@@ -217,7 +220,10 @@
             margin-bottom: 0;
             line-height: 57px;
             letter-spacing: 0.2px;
-            text-transform: uppercase;
+        }
+
+        .why-us .title_header {
+            text-transform: uppercase; 
         }
 
         .title_paragraph {
@@ -235,7 +241,9 @@
             grid-template-columns: 328px 328px 328px;
             border: none;
             gap: 30px;
-            padding-bottom: 100px;
+        }
+        .why-us .grid-container {
+            padding-bottom: 100px; 
         }
 
         .grid-item {
@@ -290,6 +298,7 @@
                 padding: 75px 40px 45px ;
                 flex-direction: column;
                 align-items: center;
+                text-align: center;
             }
         }
         .clients-say {
@@ -311,21 +320,14 @@
             gap: 80px;
         }
 
-        .grid-item {
+        .clients-say .grid-item {
             display: flex;
             padding: 30px 35px;
             align-items: center;
+            border-radius: 5px;
         }
 
-        .clients-say .section_title {
-            display: flex;
-            width: 864px;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .grid-container_feedback {
+        .clients-say .grid-container {
             display: flex;
             align-items: center;
             gap: 30px;
@@ -383,6 +385,15 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .section_title {
+                padding: 75px 40px 45px;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
         }
 
         .footer {
@@ -642,7 +653,7 @@
             <p class="title_paragraph">Problems trying to resolve the conflict between the two major realms of
                 Classical physics: Newtonian mechanics</p>
         </div>
-        <div class="grid-container_feedback">
+        <div class="grid-container">
             <div class="grid-item">
                 <div class="card-content">
                     <div class="starbar">
