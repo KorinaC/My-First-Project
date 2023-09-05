@@ -292,7 +292,61 @@
                 align-items: center;
             }
         }
+        
+        .team {
+            background: var(--dark-background-color, #252B42);
+            font-family: 'Montserrat';
+        }
 
+        .team .section_title {
+            padding: 80px 0 80px;
+        }
+
+        .team .grid-container {
+            padding-bottom: 80px;
+        }
+
+        .team .grid-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+        }
+
+       .teamphoto {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         align-self: stretch;
+         padding-top: 0;
+         max-width: 100%;
+        }
+
+        .team-card-content {
+            display: flex;
+            padding: 30px;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .emplname {
+            color: var(--text-color, #252B42);
+            margin: auto;
+        }
+        
+        .jobposition {
+            color: var(--second-text-color, #737373);
+            margin: auto;
+        }
+
+        .team_socials {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+      
         .footer {
             --footer-bg: #252842;
             --footer-second-bg: #16697A;
@@ -449,7 +503,6 @@
 
     </style>
 </head>
-
 <body>
     <section class="top-banner">
         <div class="container">
@@ -540,6 +593,86 @@
                     </p>
                 </div>
             </div>
+        </div>
+    </section>
+    <section class="team">
+        <div class="container">
+            <div class="section_title">
+                <h2 class="title_header">Meet Our Team</h2>
+                <p class="title_paragraph">Problems trying to resolve the conflict between the two major realms of
+                    Classical physics: Newtonian mechanics</p>
+            </div>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <div class="teamphoto">
+                        <img src="Project materials\first employee.svg" alt="Rodney Stratton" >
+                    </div>
+                     <div class="team-card-content">
+                        <h5 class="emplname">Ashley Fletcher</h5>
+                        <h6 class="jobposition">CEO</h6>
+                        <ul class="team_socials">
+                            <li>
+                                <a href="#facebook" class="social_links"></a>
+                                <img src="Project materials\teamfacebook.svg" alt="Facebook_logo" class="socials_team">
+                            </li>
+                            <li>
+                                <a href="#instagram" class="social_links"></a>
+                                <img src="Project materials\teaminsta.svg" alt="Instagram_logo" class="socials_team">
+                            </li>
+                            <li>
+                                <a href="#tweeter" class="social_links"></a>
+                                <img src="Project materials\teamtwitter.svg" alt="Tweeter_logo" class="socials_team">
+                            </li>
+                        </ul>
+                     </div>
+               </div>
+                <div class="grid-item">
+                    <div class="teamphoto">
+                        <img src="Project materials\second employee.svg" alt="Rodney Stratton" >
+                    </div>
+                    <div class="team-card-content">
+                        <h5 class="emplname">Rodney Stratton</h5>
+                        <h6 class="jobposition">Consultant</h6>
+                        <ul class="team_socials">
+                            <li>
+                                <a href="#facebook" class="social_links"></a>
+                                <img src="Project materials\teamfacebook.svg" alt="Facebook_logo" class="socials_team">
+                            </li>
+                            <li>
+                                <a href="#instagram" class="social_links"></a>
+                                <img src="Project materials\teaminsta.svg" alt="Instagram_logo" class="socials_team">
+                            </li>
+                            <li>
+                                <a href="#tweeter" class="social_links"></a>
+                                <img src="Project materials\teamtwitter.svg" alt="Tweeter_logo" class="socials_team">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="teamphoto">
+                        <img src="Project materials\third employee.svg" alt="Avie Beaton">
+                    </div>
+                    <div class="team-card-content">
+                        <h5 class="emplname">Avie Beaton</h5>
+                        <h6 class="jobposition">Co-Founder</h6>
+                        <ul class="team_socials">
+                            <li>
+                                <a href="#facebook" class="social_links"></a>
+                                <img src="Project materials\teamfacebook.svg" alt="Facebook_logo" class="socials_team">
+                            </li>
+                            <li>
+                                <a href="#instagram" class="social_links"></a>
+                                <img src="Project materials\teaminsta.svg" alt="Instagram_logo" class="socials_team">
+                            </li>
+                            <li>
+                                <a href="#tweeter" class="social_links"></a>
+                                <img src="Project materials\teamtwitter.svg" alt="Tweeter_logo" class="socials_team">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+           </div>
         </div>
     </section>
     <footer class="footer">
