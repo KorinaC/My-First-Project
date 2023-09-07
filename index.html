@@ -529,7 +529,6 @@
 
         .appointmentform::before {
             content: '';
-            display: block;
             width: 100%;
             height: 100%;
             position: absolute;
@@ -545,7 +544,7 @@
 
         .appformcontent {
             display: flex;
-            width: 630px;
+            width: 700px;
             padding: 40px 0px;
             flex-direction: column;
             align-items: flex-start;
@@ -574,9 +573,8 @@
         }
 
         .actionform {
-            gap: 30px;
             border: none;
-            border: 1px solid var(--muted-color, #BDBDBD);
+            gap: 30px;
         }
 
         .name-and-email {
@@ -614,8 +612,10 @@
             padding: 15px 40px;
             flex-direction: column;
             align-items: center;
-            gap: 10px;
             border-radius: 5px;
+            background: var(--primary-color, #FFA62B);
+            border: none;
+            color: white;
         }
 
         .appform_secondcontent {
@@ -1080,15 +1080,15 @@
                     <h5 class="contactustext">Contact Us</h5>
                     <h2 class="appointmenttext">Make an Appointment</h2>
                 </div>
-                <form action="actionform">
+                <form class="actionform">
                         <input class="name-and-email" type="text" placeholder="Full Name">
-                        <input class="name-and-email" type="email" placeholder="example@gmail.com"> <br>
+                        <input class="name-and-email" type="email" placeholder="example@gmail.com"> 
                         <input class="date-and-time" type="date" placeholder="Please select">
-                        <input class="date-and-time" type="time" placeholder="4:00 Available"> <br>
+                        <input class="date-and-time" type="time" placeholder="4:00 Available"> 
                         <input class="textarea" type="textarea" placeholder="Message">
                 </form>
-                    <div class="bttn-appointment">
-                        <input class="bttn--primary" type="submit" value="Book Appointment">
+                    <div class="bttn--primary">
+                        <input class="bttn-appointment" type="submit" value="Book Appointment">
                     </div>
             </div>
         </div>
