@@ -341,13 +341,18 @@
 
         @media screen and (max-width: 768px) {
             .bestservice .container {
-            padding: 50px 40 30px;
-            gap: 60px;
-        }
-            .video-content {
-                padding: 60px 0 20px;
-                width: auto;
+                padding: 50px 40px 50px;
+                gap: 60px;
+                flex-direction: column;
                 align-items: center;
+                display:flex;
+            }
+
+            .video {
+                width: 306px;
+                height: 442px;
+                flex-shrink: 0;
+                object-fit: cover;
             }
         }
 
@@ -549,7 +554,7 @@
             background: rgba(0, 0, 0, 0.50);
             z-index: -1;
         }
-        
+
         .appointmentform .container {
             align-items: flex-start;
         }
@@ -632,16 +637,16 @@
             color: white;
             border: none;
         }
+        
+        .appform_secondary .container {
+            align-items: flex-start;
+        }
 
         .appform_secondcontent {
             padding: 40px 0 40px;
             display: flex;
             align-items: flex-start;
             gap: 360px;
-        }
-
-        .appform_secondary .container {
-            align-items: flex-start;
         }
 
         .appform_secondheading {
@@ -673,6 +678,7 @@
             border: none;
             color: white;
         }
+
         @media screen and (max-width: 768px) {
             .appformcontent {
                 width: auto;
@@ -1131,15 +1137,15 @@
                     <h2 class="appointmenttext">Make an Appointment</h2>
                 </div>
                 <form class="actionform">
-                        <input class="name-and-email" type="text" placeholder="Full Name">
-                        <input class="name-and-email" type="email" placeholder="example@gmail.com"> 
-                        <input class="date-and-time" type="date" placeholder="Please select">
-                        <input class="date-and-time" type="time" placeholder="4:00 Available"> 
-                        <input class="textarea" type="textarea" placeholder="Message">
+                    <input class="name-and-email" type="text" placeholder="Full Name">
+                    <input class="name-and-email" type="email" placeholder="example@gmail.com">
+                    <input class="date-and-time" type="date" placeholder="Please select">
+                    <input class="date-and-time" type="time" placeholder="4:00 Available">
+                    <input class="textarea" type="textarea" placeholder="Message">
                 </form>
-                    <div >
-                        <button class="bttn-appointment" type="submit">Book Appointment</button>
-                    </div>
+                <div>
+                    <button class="bttn-appointment" type="submit">Book Appointment</button>
+                </div>
             </div>
         </div>
     </section>
