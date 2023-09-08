@@ -339,6 +339,18 @@
             border: none;
         }
 
+        @media screen and (max-width: 768px) {
+            .bestservice .container {
+            padding: 50px 40 30px;
+            gap: 60px;
+        }
+            .video-content {
+                padding: 60px 0 20px;
+                width: auto;
+                align-items: center;
+            }
+        }
+
         .clients-say {
             background: var(--dark-background-color, #252B42);
             font-family: 'Montserrat';
@@ -575,10 +587,12 @@
         .actionform {
             border: none;
             gap: 30px;
+            display: inline-grid;
         }
 
         .name-and-email {
-            display: inline-flex;
+            display: flex;
+            flex-direction: row;
             width: 285px;
             height: 50px;
             border-radius: 5px;
@@ -621,15 +635,23 @@
         .appform_secondcontent {
             padding: 40px 0 40px;
             display: flex;
-            align-items: center;
             gap: 360px;
         }
 
-        .appform_secondtext {
+        .appform_secondcontent .container {
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
+        .appform_secondheading {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             gap: 10px;
+        }
+
+        .appform_secondheading .card_body {
+            margin: 0;
         }
 
         .consulting {
@@ -649,6 +671,32 @@
             background: var(--primary-color, #FFA62B);
             border: none;
             color: white;
+        }
+        @media screen and (max-width: 768px) {
+            .appformcontent {
+                width: auto;
+            }
+
+            .actionform {
+                width: auto;
+            }
+
+            .textarea {
+                width: auto;
+            }
+
+            .appform_secondcontent {
+                display: flex;
+                width: auto;
+                flex-direction: column;
+                align-items: center;
+                gap: 50px;;
+            }
+            .appform_secondheading {
+                padding: 40px 60px 0px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
         }
 
         .footer {
@@ -1096,7 +1144,7 @@
     <section class="appform_secondary">
         <div class="container">
             <div class="appform_secondcontent">
-                <div class="appform_secondtext">
+                <div class="appform_secondheading">
                     <h3 class="consulting">Consulting Agency For Your Business</h3>
                     <p class="card_body">the quick fox jumps over the lazy dog</p>
                 </div>
