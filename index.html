@@ -587,11 +587,11 @@
         .actionform {
             border: none;
             gap: 30px;
-            display:inline-grid;
+            display: inline-grid;
         }
 
         .name-and-email {
-            display: flex;
+            display: inline-flex;
             flex-direction: row;
             width: 285px;
             height: 50px;
@@ -603,6 +603,7 @@
 
         .date-and-time {
             display: flex;
+            flex-direction: row;
             width: 285px;
             height: 50px;
             border-radius: 5px;
@@ -628,8 +629,8 @@
             align-items: center;
             border-radius: 5px;
             background: var(--primary-color, #FFA62B);
-            border: none;
             color: white;
+            border: none;
         }
 
         .appform_secondcontent {
@@ -639,7 +640,7 @@
             gap: 360px;
         }
 
-        .appform_secondcontent .container {
+        .appform_secondary .container {
             align-items: flex-start;
         }
 
@@ -690,8 +691,9 @@
                 width: auto;
                 flex-direction: column;
                 align-items: center;
-                gap: 50px;;
+                gap: 50px;
             }
+
             .appform_secondheading {
                 padding: 40px 60px 0px;
                 flex-direction: column;
@@ -1135,8 +1137,8 @@
                         <input class="date-and-time" type="time" placeholder="4:00 Available"> 
                         <input class="textarea" type="textarea" placeholder="Message">
                 </form>
-                    <div class="bttn--primary">
-                        <input class="bttn-appointment" type="submit" value="Book Appointment">
+                    <div >
+                        <button class="bttn-appointment" type="submit">Book Appointment</button>
                     </div>
             </div>
         </div>
