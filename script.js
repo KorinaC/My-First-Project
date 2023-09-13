@@ -1,3 +1,4 @@
+//Homework:13
 let country = "France";
 let continent = "Europe";
 let population =  65 ;
@@ -10,7 +11,7 @@ console.log (population) ;
 let countryDescription = country + ' is located in ' + continent + ', ' + population + ' million people live there.' ; 
 console.log(countryDescription)
 
-
+//Homework:2
 let weightSarah = 65;
 let weightBob = 93;
 let heightSarah = 1.75;
@@ -34,6 +35,7 @@ if (bmiBob > 25 ) {
     console.log("Bob has a normal weight")
 } 
 
+//Homework:3
 let countryCode = 'MD'
 
 switch (countryCode) {
@@ -148,3 +150,54 @@ if (currentYear % 4 == 0 && currentYear % 100 != 0 || currentYear % 400 == 0)
 else { 
     console.log(currentYear + " this year is not leap")   
 } 
+
+//Homework:4
+ let fruits = [];
+ fruits.push("apple","banana","orange");
+ let len = fruits.length;
+ console.log(fruits);
+
+let numbers = [1,2,3,4,5];
+console.log(numbers.pop());
+console.log(numbers);
+
+let colors = ["red","green","blue","yellow"];
+console.log(colors);
+console.log(colors.indexOf("green"));
+console.log(colors.includes("oange"));
+
+let names = ["John","Jane","Mike","Jennifer"];
+console.log(names);
+console.log(names.unshift("David"));
+console.log(names.indexOf("Mike"));
+
+let secondNumbers =[2,4,6,8,10];
+console.log(secondNumbers.includes(5));
+console.log(secondNumbers.push(12));
+console.log(secondNumbers);
+
+let months =[ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November","December"];
+console.log(months);
+
+let monthsAlphabetOrder = months.sort();
+console.log(monthsAlphabetOrder);
+
+let result = months.filter((word) => word.length >3);
+console.log(result);
+
+let sixMonths = months.slice(6, 12);
+console.log(sixMonths);
+
+let filteredMonths = monthsAlphabetOrder.filter((word) => word.length >5) ;
+  
+//let phrase = filteredMonths.split("-");
+
+console.log(filteredMonths.join("-"));
+
+
+
+
+
+
+
+
