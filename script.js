@@ -176,7 +176,7 @@ console.log(secondNumbers.includes(5));
 console.log(secondNumbers.push(12));
 console.log(secondNumbers);
 
-let months =[ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November","December"];
+let months = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November","December"];
 console.log(months);
 
 let monthsAlphabetOrder = months.sort();
@@ -193,6 +193,109 @@ let filteredMonths = monthsAlphabetOrder.filter((word) => word.length >5) ;
 //let phrase = filteredMonths.split("-");
 
 console.log(filteredMonths.join("-"));
+
+//Loop in Array
+
+const fruits2 = ["apple", "banana", "orange"];
+console.log(fruits2);
+
+for ( let i = 0; i <= 3; i++ ) {
+ console.log(i)
+}
+
+const numbers2 = [1,2,3,4];
+console.log(numbers2);
+
+let sum = 0;
+for (let e of numbers2){
+    sum += e;
+}
+console.log(sum);
+
+const names2 = ["John", "Jane", "Mikhael", "Jennifer", "Bobby"];
+console.log(names2);
+const nameLengths = [];
+
+for (let i = 0; i < names2.length; i++) {
+  const nameLength = names2[i].length;
+  nameLengths.push(nameLength);
+}
+console.log(nameLengths);
+
+
+const departments = [
+    ["Alex", "Luca", "Marta"],
+    ["Leo","Jared","Sophie"],
+    ["Chester","Mike","Joe"],
+    ["Lenet","Alison","Gaby"]
+]
+console.log(departments);
+
+let employeeAlphabetOrder = departments.sort();
+console.log (employeeAlphabetOrder);
+
+ //Objects
+
+ const person = { 
+    firstName: "John", 
+    lastName: "Doe", 
+    age: 30, 
+    occupation: "developer" }; 
+  
+console.log(person);
+
+
+function createArray(n) {
+    let newArr = [];
+    for (let i = 1; i <= n; i++) {
+        newArr.push(i);
+    }
+    return newArr;
+}
+
+let n = 17 ;
+let arrayNumber = createArray(n);
+console.log(arrayNumber);
+
+let numbers7 = [5,10,15,20,25,30];
+console.log(numbers7);
+const maxNumbers7 = [];
+let max = numbers7[0]; 
+
+for (let i = 0; i < numbers7.length; i++) {
+  if (numbers7[i] > max) {
+    max = numbers7[i]; 
+  }
+}
+  console.log(max)
+
+
+function calculateAverageGrade(grades) {
+    const gradeValues = Object.values(grades);
+    const sum = gradeValues.reduce((accumulator, currentGrade) => accumulator + currentGrade, 0);
+    const average = sum / gradeValues.length;
+    console.log(average);
+  }
+  const studentGrades = {
+    math: 9,
+    english: 9,
+    astronomy: 8,
+    physics: 9,
+  };
+  const averageGrade = calculateAverageGrade(studentGrades);
+  console.log("The average grade is: " + averageGrade);
+
+
+const dog = {
+    name: "Newton",
+    age: 1,
+    color: 'golden',
+    puppies: ['Puppy_1', 'Puppy_2', 'Puppy_3', 'Puppy_4', 'Puppy_5']
+  }
+  
+
+
+
 
 
 
