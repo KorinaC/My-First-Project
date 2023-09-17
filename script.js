@@ -295,7 +295,7 @@ function calculateAverageGrade(grades) {
 
   dog.prototype.addPuppies = function(numPuppies) {
     this.puppies = ['Puppy_1','Puppy_2','Puppy_3','Puppy_4','Puppy_5'];
-    for (let i = 1; i <= numPuppies; i++) {
+    for (let i = 0; i <= numPuppies; i++) {
       this.puppies.push(`Puppy_${i}`);
     }
   };
