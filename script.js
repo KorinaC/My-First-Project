@@ -274,17 +274,17 @@ function calculateAverageGrade(grades) {
     const gradeValues = Object.values(grades);
     const sum = gradeValues.reduce((accumulator, currentGrade) => accumulator + currentGrade, 0);
     const average = sum / gradeValues.length;
-    console.log(average);
+    console.log("The average grade is: " + average);
   }
+
   const studentGrades = {
     math: 9,
     english: 9,
     astronomy: 8,
     physics: 9,
   };
-  const averageGrade = calculateAverageGrade(studentGrades);
 
-  console.log("The average grade is: " + averageGrade);
+  const averageGrade = calculateAverageGrade(studentGrades);
 
   function dog (name, age, color, puppies) {
     this.name = name;
