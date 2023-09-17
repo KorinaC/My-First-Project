@@ -283,16 +283,35 @@ function calculateAverageGrade(grades) {
     physics: 9,
   };
   const averageGrade = calculateAverageGrade(studentGrades);
+
   console.log("The average grade is: " + averageGrade);
 
-
-const dog = {
-    name: "Newton",
-    age: 1,
-    color: 'golden',
-    puppies: ['Puppy_1', 'Puppy_2', 'Puppy_3', 'Puppy_4', 'Puppy_5']
+  function dog (name, age, color, puppies) {
+    this.name = name;
+    this.age = age;
+    this.color = color;
+    this.puppies = puppies;
   }
-  
+
+  dog.prototype.addPuppies = function(numPuppies) {
+    this.puppies = ['Bernoulli','Euler','Pascal'];
+    for (let i = 1; i <= numPuppies; i++) {
+      this.puppies.push(`Puppy_${i}`);
+    }
+  };
+
+  let myDog = new dog("Newton", 1, "golden");
+  myDog.addPuppies();
+  console.log(myDog); 
+
+//   const fistDog = {
+//     name: 'Newton',
+//     age: 1,
+//     color: 'golden',
+//     puppies: ['Bernoulli','Euler','Pascal'],
+//   };
+
+
 
 
 
