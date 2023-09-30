@@ -305,32 +305,7 @@ function calculateAverageGrade(grades) {
   console.log(myDog); 
 
   //Homework 19
-
-//  function person(name, age, city) {
-//     (this.name = name),
-//     (this.age = age), 
-//     (this.city = city);
-// }
-
-//     while (
-//         name = John,
-//         age = 30,
-//         city = New-York)
-
-    // function displayObject(obj) {
-    //      var keys = Object.keys(obj);
-    //     var i = 0;
-    //     while (i < keys.length) {
-    //       var key = keys[i];
-    //       var value = obj[key];
-    //       console.log(key + ": " + value);
-    //       i++;
-    //         }
-    //       }
-    
-    //       var obj = { name: 'John', age: 30, city: 'New-York' };
-    //       displayObject(obj);       
- 
+     
     let personDesc = ['name = John','age:30', 'city: New-York'];
     let i = 0;
     let text = '';
@@ -365,63 +340,130 @@ function calculateAverageGrade(grades) {
         let vowels =['a','A','e','E','i','I','o','O','u','U'];
         let count = 0;
         let i = 0;
-    }
     while (i < string.length) {
         let char = string[i];
         if (vowels.includes(char)) {
             count++
         }
+        i++;
+    }
         return count;
     }
 
-    let stringConent = 'Hello world, my name is Albert';
-    let answer = countVolwes(stringContent);
+    let stringContent = 'Hello world, my name is Albert';
+    let answer = countVowels(stringContent);
     console.log(answer); 
 
-    function combineTheWords(obj){
-        let keys = Object.keys(obj);
-        let combineValue = '';
-        let i = 0;
+//     function combineTheWords(obj){
+//         let keys = Object.keys(obj);
+//         let combineValue = '';
+//         let i = 0;
+//     do {
+//         let currentProp = keys[i];
+//         combineValue += obj[currentProp];
+//         i++;
+//         console.log(combineValue)
+
+//     } while (i<keys.length);
+
+//      return combineValue
+//    }
+
+//    let obj = { prop1: 'Hello', prop2:'World', prop3: '!'}
+//    console.log (combineTheWords(obj));
+
+let initialObject = { prop1: 'Hello', prop2: 'World', prop3: '!'}
+
+function combineTheWords(obj) {
+    let objKeys = Object.keys(obj);
+
+    let result = '' ;
+    let i = 0;
     do {
-        let currentProp = keys[i];
-        combineValue += obj[currentProp];
+        let currentKey = objKeys[i];
+        let currentValue = initialObject [currentKey];
+        result += currentValue;
         i++;
-        console.log(combineValue)
+    } while (i < objKeys.length);
+    return result;
+}
 
-    } while (i<keys.length);
-
-     return combineValue
-   }
-
-   let obj = { prop1: 'Hello', prop2:'World', prop3: '!'}
-   console.log (combineTheWords(obj));
+console.log(combineTheWords(initialObject));
 
 
-    function calculateAverageGrade(students) {
-        let average = {}
-    }
+    function calculateAverageMark(_students) {
+        let average = {};
 
     students.forEach(s => {
-        let averageGrade = s.marks.reduce((a,i) => a + i) / s.marks.length;
-        average[s.name] = 'medium: ${averageGrade.toFixed(2)}';
-    });
-    return average;
+        let averageMark = s.marks.reduce((a, i) => a + i) / s.marks.length;
+        average[s.name] = `medium: ${averageMark.toFixed(2)}`;
+     });
+     return average;
+    }
 
-    let students = [{
+    let students = [
+    {
         name: "John",
-        grades: [8, 9, 8]
+        marks: [8, 7, 9]
     },
     {
         name: "Mary",
-        grades: [8, 8, 10]
+        marks: [9, 9, 10]
     },
     {
-        name: "Sophie",
-        grades: [9, 8, 10]
+        name: "Alex",
+        marks: [6, 7, 8]
     }
 ];
-let studentAverageGrade = calculateAverageGrade(students);
 
+let studentAverageMark = calculateAverageMark(students);
+console.log(studentAverageMark);
+
+//Homework 20//
+
+const products = [
+    {name: "Tshirt", price: 50, isAvailable: true },
+    {name: "Pants", price: 80, isAvailable: false },
+    {name: "Jacket", price: 120, isAvailable: true },
+    {name: "Shirt", price: 60, isAvailable: true },
+    {name: "Skirt", price: 40, isAvailable: false }
+  ];
+
+  const items = products
+  .filter(item => item.isAvailable)
+  .map(product => product.name)
+  console.log(items)
+
+  const figures = [10,5,8,15,3,20]
+  const maxDigit = figures.reduce(function (largest, digit){
+    return (largest > digit) ?largest : digit
+  })
+  console.log(maxDigit);
+
+  const studentsClassification = [
+    {
+        John: [8,7,9]
+    },
+    {
+        Mary: [9,9,10]
+    },
+    {
+        Alex: [6,8,7]
+    }
+  ];
+  const averageClassification = studentsClassification.reduce((acc,student) => {
+    acc[Object.keys(student)[0]] = student[Object.keys(student)[0]].reduce((acc, score) => acc + score, 0) / student[Object.keys(student)[0]].length;
+    // let key = Object.keys(student)[0];
+    // console.log(key)
+    // let value = student(key);
+    // console.log(value)
+    // let total = value.reduce((acc, score) => acc + score, 0);
+
+    // acc[key] = total / value.length;
+    return acc;
+  });
+
+  console.log(averageClassification);
 
 
 
