@@ -140,8 +140,9 @@ if (isAvailable = true ) {
 }
 else {(number % 2 !== 0)
     console.log("There is no inventory at the warehouse")
-}
+};
 
+///
 
 let currentYear = new Date().getFullYear();
 if (currentYear % 4 == 0 && currentYear % 100 != 0 || currentYear % 400 == 0)
@@ -149,7 +150,7 @@ if (currentYear % 4 == 0 && currentYear % 100 != 0 || currentYear % 400 == 0)
 }
 else { 
     console.log(currentYear + " this year is not leap")   
-} 
+};
 
 //Homework:17
  let fruits = [];
@@ -157,19 +158,27 @@ else {
  let len = fruits.length;
  console.log(fruits);
 
+ ///
+
 let numbers = [1,2,3,4,5];
 console.log(numbers.pop());
 console.log(numbers);
+
+///
 
 let colors = ["red","green","blue","yellow"];
 console.log(colors);
 console.log(colors.indexOf("green"));
 console.log(colors.includes("oange"));
 
+///
+
 let names = ["John","Jane","Mike","Jennifer"];
 console.log(names);
 console.log(names.unshift("David"));
 console.log(names.indexOf("Mike"));
+
+///
 
 let secondNumbers =[2,4,6,8,10];
 console.log(secondNumbers.includes(5));
@@ -189,8 +198,6 @@ let sixMonths = months.slice(6, 12);
 console.log(sixMonths);
 
 let filteredMonths = monthsAlphabetOrder.filter((word) => word.length >5) ;
-  
-//let phrase = filteredMonths.split("-");
 
 console.log(filteredMonths.join("-"));
 
@@ -203,6 +210,8 @@ for ( let i = 0; i <= 3; i++ ) {
  console.log(i)
 }
 
+ ///
+
 const numbers2 = [1,2,3,4];
 console.log(numbers2);
 
@@ -211,6 +220,8 @@ for (let e of numbers2){
     sum += e;
 }
 console.log(sum);
+
+///
 
 const names2 = ["John", "Jane", "Mikhael", "Jennifer", "Bobby"];
 console.log(names2);
@@ -222,6 +233,7 @@ for (let i = 0; i < names2.length; i++) {
 }
 console.log(nameLengths);
 
+///
 
 const departments = [
     ["Alex", "Luca", "Marta"],
@@ -244,6 +256,7 @@ console.log (employeeAlphabetOrder);
   
 console.log(person);
 
+///
 
 function createArray(n) {
     let newArr = [];
@@ -257,6 +270,8 @@ let n = 17 ;
 let arrayNumber = createArray(n);
 console.log(arrayNumber);
 
+///
+
 let numbers7 = [5,10,15,20,25,30];
 console.log(numbers7);
 const maxNumbers7 = [];
@@ -269,6 +284,7 @@ for (let i = 0; i < numbers7.length; i++) {
 }
   console.log(max)
 
+///
 
 function calculateAverageGrade(grades) {
     const gradeValues = Object.values(grades);
@@ -286,6 +302,7 @@ function calculateAverageGrade(grades) {
 
   const averageGrade = calculateAverageGrade(studentGrades);
 
+  ///
   function dog (name, age, color, puppies) {
     this.name = name;
     this.age = age;
@@ -315,13 +332,15 @@ function calculateAverageGrade(grades) {
     }
     console.log(text);
 
+    ///
+
     function keyInObject(obj, keyToFind) {
         for (let key in obj) {
             if (key == keyToFind) {
                 return true;
             }
         }
-    }
+    };
 
     let guy = {
         name: 'John',
@@ -334,7 +353,9 @@ function calculateAverageGrade(grades) {
         console.log ('true');
     } else {
         console.log('false');
-    }
+    };
+
+    ///
 
     function countVowels(string) {
         let vowels =['a','A','e','E','i','I','o','O','u','U'];
@@ -443,8 +464,9 @@ console.log(combineTheWords(initialObject));
     }
     return resultObject;
  };
-
  console.log(getMedium(input));
+
+ ///
 
 const reversedWords = (initialString) => {
     const initialStringArray = initialString.split('');
@@ -463,6 +485,8 @@ const reversedWords = (initialString) => {
 let initialString = 'Hello, world!';
 
 console.log(reversedWords(initialString));
+
+///
 
 function isPalindrome(str) {
     const cleanedStr = str.replace(/\s/g, '').toLowerCase();
@@ -506,6 +530,8 @@ const studentNotes = [
   const averageNote = calculateAverageNote(studentNotes);
   console.log(averageNote); 
 
+  ///
+
 const products = [
     {name: "Tshirt", price: 50, isAvailable: true },
     {name: "Pants", price: 80, isAvailable: false },
@@ -519,11 +545,15 @@ const products = [
   .map(product => product.name)
   console.log(items)
 
+  ///
+
   const figures = [10,5,8,15,3,20]
   const maxDigit = figures.reduce(function (largest, digit){
     return (largest > digit) ? largest : digit
   })
   console.log(maxDigit);
+
+  ///
 
   const studentsClassification = [
     {
@@ -543,7 +573,76 @@ const products = [
 
   console.log(averageClassification);
 
+  //Homework 22//
 
+  let student = {
+    name: 'John',
+    lastName: 'Doe',
+    faculty: 'history',
+    year: 3
+};
+
+const studentInfo = ({ name, lastName, faculty, year }) => {
+    return [`${name} ${lastName}`, faculty, year];
+};
+
+const resultIs = studentInfo(student);
+console.log(resultIs);
+
+///
+
+const severalColors = ['red', 'green', 'blue', 'violet'] 
+
+const [el1, , el3] = severalColors
+console.log(el1);
+console.log(el3);
+
+//
+
+const extractFirstAndThird = ([first, , third]) => {
+    return [first, third];
+};
+
+const theColors = ["red", "green", "blue", "violet"];
+const [first, third] = extractFirstAndThird(theColors);
+
+console.log(first);
+console.log(third);
+
+///
+
+function getArgumentsAsArray() {
+    return Array.from(arguments);
+  }
+
+  const output = getArgumentsAsArray(1, 2, 3, 4, 5);
+  console.log(output);
+
+///
+
+function combineArrays(arrayOne, arrayTwo) {
+    return [...arrayOne, ...arrayTwo];
+  }
+
+  const arrayOne = [7, 8, 9];
+  const arrayTwo = [10, 11, 12];
+  
+  const combinedArray = combineArrays(arrayOne, arrayTwo);
+  console.log(combinedArray);
+
+  ///
+  
+  let languageObject = { language: 'en' };
+
+  function addLanguageToStudent(student, languageObject) {
+    return {
+        ...student,
+        ...languageObject,
+    };
+}
+
+let updatedStudent = addLanguageToStudent(student, languageObject);
+console.log(updatedStudent);
 
 
 
