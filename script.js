@@ -11,7 +11,7 @@ console.log (population) ;
 let countryDescription = country + ' is located in ' + continent + ', ' + population + ' million people live there.' ; 
 console.log(countryDescription)
 
-//Homework:2
+//Homework:14
 let weightSarah = 65;
 let weightBob = 93;
 let heightSarah = 1.75;
@@ -35,7 +35,7 @@ if (bmiBob > 25 ) {
     console.log("Bob has a normal weight")
 } 
 
-//Homework:3
+//Homework:15
 let countryCode = 'MD'
 
 switch (countryCode) {
@@ -151,7 +151,7 @@ else {
     console.log(currentYear + " this year is not leap")   
 } 
 
-//Homework:4
+//Homework:17
  let fruits = [];
  fruits.push("apple","banana","orange");
  let len = fruits.length;
@@ -194,7 +194,7 @@ let filteredMonths = monthsAlphabetOrder.filter((word) => word.length >5) ;
 
 console.log(filteredMonths.join("-"));
 
-//Loop in Array
+//Homework 18//
 
 const fruits2 = ["apple", "banana", "orange"];
 console.log(fruits2);
@@ -304,7 +304,7 @@ function calculateAverageGrade(grades) {
   myDog.addPuppies();
   console.log(myDog); 
 
-  //Homework 19
+  //Homework 19//
      
     let personDesc = ['name = John','age:30', 'city: New-York'];
     let i = 0;
@@ -390,36 +390,121 @@ function combineTheWords(obj) {
 
 console.log(combineTheWords(initialObject));
 
+//     function calculateAverageMark(_students) {
+//         let average = {};
 
-    function calculateAverageMark(_students) {
-        let average = {};
+//     students.forEach(s => {
+//         let averageMark = s.marks.reduce((a, i) => a + i) / s.marks.length;
+//         average[s.name] = `medium: ${averageMark.toFixed(2)}`;
+//      });
+//      return average;
+//     }
 
-    students.forEach(s => {
-        let averageMark = s.marks.reduce((a, i) => a + i) / s.marks.length;
-        average[s.name] = `medium: ${averageMark.toFixed(2)}`;
-     });
-     return average;
+//     let students = [
+//     {
+//         name: "John",
+//         marks: [8, 7, 9]
+//     },
+//     {
+//         name: "Mary",
+//         marks: [9, 9, 10]
+//     },
+//     {
+//         name: "Alex",
+//         marks: [6, 7, 8]
+//     }
+// ];
+// let studentAverageMark = calculateAverageMark(students);
+// console.log(studentAverageMark);
+
+ let input = {
+    John: [8,7,9],
+    Mary: [9,9,10],
+    Alex: [6,8,7],
+ };
+
+ const getMedium = (initialObj) => {
+    let resultObject = Object.assign({}, initialObj);
+    for (element in initialObj) {
+        let curentValue = initialObj[element];
+
+        i = 0;
+        let sum = 0;
+        let medium = 0;
+        let arrayLength = curentValue.length;
+
+        while (i < arrayLength) {
+            sum += curentValue[i];
+            i++;
+        }
+        medium = sum / arrayLength;
+
+        resultObject[element] = `medium: ${medium}`;
     }
+    return resultObject;
+ };
 
-    let students = [
-    {
-        name: "John",
-        marks: [8, 7, 9]
-    },
-    {
-        name: "Mary",
-        marks: [9, 9, 10]
-    },
-    {
-        name: "Alex",
-        marks: [6, 7, 8]
+ console.log(getMedium(input));
+
+const reversedWords = (initialString) => {
+    const initialStringArray = initialString.split('');
+
+    const resultStringArray = [];
+    let i = initialStringArray.length - 1;
+    do {
+        resultStringArray.push(initialStringArray[i]);
+        i--;
     }
-];
+    while (i >= 0);
 
-let studentAverageMark = calculateAverageMark(students);
-console.log(studentAverageMark);
+    let resultString = resultStringArray.join('');
+    return resultString;
+};
+let initialString = 'Hello, world!';
+
+console.log(reversedWords(initialString));
+
+function isPalindrome(str) {
+    const cleanedStr = str.replace(/\s/g, '').toLowerCase();
+ 
+    let start = 0;
+    let end = cleanedStr.length - 1;
+  
+    while (start < end) {
+      if (cleanedStr[start] !== cleanedStr[end]) {
+        return false;
+      }
+      start++;
+      end--;
+    }
+ 
+    return true;
+  };
+ 
+  const inputString = "radar";
+  const palindromeResult = isPalindrome(inputString);
+  console.log(palindromeResult); 
 
 //Homework 20//
+const studentNotes = [
+    { name: "Anna", note: 9 },
+    { name: "Denis", note: 7 },
+    { name: "Cristian", note: 8 },
+    { name: "Daniel", note: 6 },
+    { name: "Elena", note: 10 }
+  ];
+  
+  function calculateAverageNote(notes) {
+    const total = notes.reduce((accumulator, student) => {
+      return accumulator + student.note;
+    }, 0);
+  
+    const average = total / notes.length;
+    return average;
+  }
+  
+  const averageNote = calculateAverageNote(studentNotes);
+  console.log(averageNote); 
 
 const products = [
     {name: "Tshirt", price: 50, isAvailable: true },
@@ -436,7 +521,7 @@ const products = [
 
   const figures = [10,5,8,15,3,20]
   const maxDigit = figures.reduce(function (largest, digit){
-    return (largest > digit) ?largest : digit
+    return (largest > digit) ? largest : digit
   })
   console.log(maxDigit);
 
