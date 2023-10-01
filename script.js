@@ -538,13 +538,6 @@ const products = [
   ];
   const averageClassification = studentsClassification.reduce((acc,student) => {
     acc[Object.keys(student)[0]] = student[Object.keys(student)[0]].reduce((acc, score) => acc + score, 0) / student[Object.keys(student)[0]].length;
-    // let key = Object.keys(student)[0];
-    // console.log(key)
-    // let value = student(key);
-    // console.log(value)
-    // let total = value.reduce((acc, score) => acc + score, 0);
-
-    // acc[key] = total / value.length;
     return acc;
   });
 
