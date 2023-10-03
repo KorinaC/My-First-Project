@@ -591,9 +591,11 @@
         }
 
         .actionform {
-            border: none;
-            gap: 30px;
             display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: repeat(3, auto);
+            gap: 20px;
+            justify-content: left;
         }
 
         .name-and-email {
@@ -619,7 +621,8 @@
 
         .textarea {
             display: flex;
-            width: 598px;
+            font-family: "Montserrat";
+            grid-column: 1 / span 2;
             height: 140px;
             align-items: center;
             border-radius: 5px;
@@ -682,14 +685,23 @@
         @media screen and (max-width: 768px) {
             .appformcontent {
                 width: auto;
+                padding: 75px 40px 45px;
             }
 
             .actionform {
                 width: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
             }
 
             .textarea {
+                display: flex;
                 width: auto;
+                height: 140px;
+                align-items: center;
+                padding: 0;
             }
 
             .appform_secondcontent {
@@ -1137,15 +1149,26 @@
                     <h2 class="appointmenttext">Make an Appointment</h2>
                 </div>
                 <form class="actionform">
-                    <input class="name-and-email" type="text" placeholder="Full Name">
-                    <input class="name-and-email" type="email" placeholder="example@gmail.com">
-                    <input class="date-and-time" type="date" placeholder="Please select">
-                    <input class="date-and-time" type="time" placeholder="4:00 Available">
-                    <input class="textarea" type="textarea" placeholder="Message">
-                </form>
-                <div>
+                    <input class="name-and-email" type="text"  name="fullname" placeholder="Full Name" required>
+                    <input class="name-and-email" type="email"  name="email" placeholder="example@gmail.com" pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-zA-Z]{2,4}" required>
+                    <select class="date-and-time" name="date">
+                        <option value="">Please Select</option>
+                        <option value="mo">Monday</option>
+                        <option value="tu">Tuesday</option>
+                        <option value="we">Wednesday</option>
+                        <option value="th">Thursday</option>
+                    </select>
+                    <select class="date-and-time" name="time">
+                        <option value="">4:00 Available</option>
+                        <option value="8am">8am</option>
+                        <option value="12am">12am</option>
+                        <option value="3pm">3pm</option>
+                    </select>
+                    <textarea class="textarea" name="message" rows="5" cols="20" placeholder="Message"></textarea>
+                </form> 
+                  <div>
                     <button class="bttn-appointment" type="submit">Book Appointment</button>
-                </div>
+                  </div>
             </div>
         </div>
     </section>
