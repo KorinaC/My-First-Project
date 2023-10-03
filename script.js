@@ -644,8 +644,41 @@ function combineArrays(arrayOne, arrayTwo) {
 let updatedStudent = addLanguageToStudent(student, languageObject);
 console.log(updatedStudent);
 
+ ///
 
+ function ConvertString(word) {
+   const lowercaseWord = word.toLowerCase();
+   const charCounts = {};
+   for (const char of lowercaseWord) {
+    charCounts[char] = (charCounts[char] || 0) + 1;
+   }
+   let result = '';
+   for (const char of lowercaseWord) {
+    if (charCounts[char] > 1) {
+    result += ')';
+    } else {
+    result += '(';
+    }
+   }
+   return result;
+}
 
+console.log(ConvertString('din'));
+console.log(ConvertString('recede'));
+console.log(ConvertString('success'));
+console.log(ConvertString('(( @'));
+
+ ///
+
+const evenNum = [2, 4, 0, 100, 4, 11, 2602, 36];
+const oddNum = [160, 3, 1719, 19, 11, 13, -21];
+function findOutlier(int) {
+    let even = int.filter((a) => a % 2 === 0);
+    let odd = int.filter((a) => a % 2 !== 0);
+    return even.length === 1 ? even[0] : odd[0];
+}
+console.log(findOutlier(evenNum));
+console.log(findOutlier(oddNum));
 
 
 
