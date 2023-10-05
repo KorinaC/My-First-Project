@@ -680,7 +680,63 @@ function findOutlier(int) {
 console.log(findOutlier(evenNum));
 console.log(findOutlier(oddNum));
 
+document.addEventListener('DOMContentLoaded', function() {
+const form = document.getElementById('myForm');
+const nameInput = document.getElementById('name');
+const emailInput = document.getElementById('email');
+const messageInput = document.getElementById('message');
 
+function isValidName(name) {
+  return name.length >= 2;
+}
 
+function isValidMessage(message) {
+  const words = message.trim().split(/\s+/);
+  return words.length >= 3;
+}
+
+function setMessageColor( isValid) {
+    if (isValid) {
+      messageElement.style.color = 'green'; 
+    } else {
+      messageElement.style.color = 'red'; 
+    }
+  }
+
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  const name = nameInput.value;
+  const email = emailInput.value;
+  const message = messageInput.value;
+
+  if (isValidName(name)) {
+    setMessageColor(messageElement, true); 
+    messageElement.textContent = 'Name was registered';
+    form.submit();
+  } else {
+    setMessageColor(messageElement, false);
+    alert('Name is required and it must have at leats 3 letters.');
+  }
+
+  if (isValidName(email)) {
+    setMessageColor(messageElement, true); 
+    messageElement.textContent = 'Name was registered';
+    form.submit();
+  } else {
+    setMessageColor(messageElement, false);
+    alert('Please enter a valid email address.');
+  }
+  if (isValidName (message)) {
+    setMessageColor(messageElement, true); 
+    messageElement.textContent = 'Name was registered';
+    form.submit();
+  } else {
+    setMessageColor(messageElement, false);
+    // messageElement.textContent = 'Message is required and it must have least 3 words .';
+    alert('Message is required and it must have least 3 words .');
+  }
+});
+});
 
 
