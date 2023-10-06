@@ -680,6 +680,8 @@ function findOutlier(int) {
 console.log(findOutlier(evenNum));
 console.log(findOutlier(oddNum));
 
+//Homework 23//
+
 document.addEventListener('DOMContentLoaded', function() {
 const form = document.getElementById('myForm');
 const nameInput = document.getElementById('name');
@@ -688,12 +690,12 @@ const messageInput = document.getElementById('message');
 
 function isValidName(name) {
   return name.length >= 2;
-}
+};
 
 function isValidMessage(message) {
   const words = message.trim().split(/\s+/);
   return words.length >= 3;
-}
+};
 
 function setMessageColor( isValid) {
     if (isValid) {
