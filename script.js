@@ -690,7 +690,6 @@ const messageInput = document.getElementById('message');
 const statusMessage = document.getElementById('formstaus');
 form.addEventListener('submit', handleSubmit);
 
-
 function isValidName(name) {
   return name.length >= 2;
 };
@@ -700,7 +699,7 @@ function isValidMessage(message) {
   return words.length >= 3;
 };
 
-function handleSubmit(event){
+function handleSubmit(event) {
   event.preventDefault();
 
   const name = nameInput.value;
@@ -716,7 +715,7 @@ function handleSubmit(event){
 
   const email = emailInput.value;
 
-  if (isValidName(email)) {
+  if (isValidEmail(email)) {
     statusMessage.textContent = `Email ${emai} was registered`;
     statusMessage.style.color = 'green';
     form.submit();
@@ -727,7 +726,7 @@ function handleSubmit(event){
 
   const message = messageInput.value; 
 
-  if (isValidName (message)) {
+  if (isValidMessage (message)) {
     statusMessage.textContent = 'Message was registered';
     statusMessage.style.color = 'green';
     form.submit();
@@ -735,7 +734,7 @@ function handleSubmit(event){
     statusMessage.textContent = 'Message is required and it must have least 3 words .';
     statusMessage.style.color = 'red';
   }
-});
+}
 });
 
 
