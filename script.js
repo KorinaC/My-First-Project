@@ -687,6 +687,9 @@ const form = document.getElementById('myForm');
 const nameInput = document.getElementById('name');
 const emailInput = document.getElementById('email');
 const messageInput = document.getElementById('message');
+const statusMessage = document.getElementById('formstaus');
+form.addEventListener('submit', handleSubmit);
+
 
 function isValidName(name) {
   return name.length >= 2;
@@ -697,46 +700,40 @@ function isValidMessage(message) {
   return words.length >= 3;
 };
 
-function setMessageColor( isValid) {
-    if (isValid) {
-      messageElement.style.color = 'green'; 
-    } else {
-      messageElement.style.color = 'red'; 
-    }
-  }
-
-form.addEventListener('submit', function(event) {
+function handleSubmit(event){
   event.preventDefault();
 
   const name = nameInput.value;
-  const email = emailInput.value;
-  const message = messageInput.value;
 
   if (isValidName(name)) {
-    setMessageColor(messageElement, true); 
-    messageElement.textContent = 'Name was registered';
+    statusMessage.textContent = 'Name was registered';
+    statusMessage.style.color = 'green';
     form.submit();
   } else {
-    setMessageColor(messageElement, false);
-    alert('Name is required and it must have at leats 3 letters.');
+    statusMessage.textContent = 'Name is required and it must have at least 3 letters.';
+    statusMessage.style.color = 'red';
   }
 
+  const email = emailInput.value;
+
   if (isValidName(email)) {
-    setMessageColor(messageElement, true); 
-    messageElement.textContent = 'Name was registered';
+    statusMessage.textContent = `Email ${emai} was registered`;
+    statusMessage.style.color = 'green';
     form.submit();
   } else {
-    setMessageColor(messageElement, false);
-    alert('Please enter a valid email address.');
+    statusMessage.textContent = 'Please enter a valid email address.';
+    statusMessage.style.color = 'red';
   }
+
+  const message = messageInput.value; 
+
   if (isValidName (message)) {
-    setMessageColor(messageElement, true); 
-    messageElement.textContent = 'Name was registered';
+    statusMessage.textContent = 'Message was registered';
+    statusMessage.style.color = 'green';
     form.submit();
   } else {
-    setMessageColor(messageElement, false);
-    // messageElement.textContent = 'Message is required and it must have least 3 words .';
-    alert('Message is required and it must have least 3 words .');
+    statusMessage.textContent = 'Message is required and it must have least 3 words .';
+    statusMessage.style.color = 'red';
   }
 });
 });
