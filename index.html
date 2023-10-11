@@ -7,6 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+    <script src="index.js"></script>
     <style>
         body {
             --bttn-primary-bg: #FFA62B;
@@ -119,7 +121,7 @@
         }
 
         #weknow {
-            font-size: 1.5rem;
+            font-size: 25px;
             line-height: 30px;
             font-weight: normal;
         }
@@ -163,11 +165,11 @@
                 margin-bottom: 1em;
                 line-height: 3em;
             }
-            
+
             .header_actions {
                 margin-left: 0;
             }
-            
+
             .top_banner_content {
                 display: flex;
                 flex-direction: column;
@@ -175,6 +177,7 @@
                 text-align: center;
                 gap: 40px;
             }
+
             #future {
                 font-size: 40px;
                 line-height: 45px;
@@ -187,7 +190,7 @@
                 font-weight: 500;
                 line-height: 30px;
                 letter-spacing: 0.2px;
-               
+
             }
 
             .top_banner_actions {
@@ -197,6 +200,7 @@
                 gap: 25px;
             }
         }
+
         .why-us {
             background: var(--dark-background-color, #252B42);
         }
@@ -223,7 +227,7 @@
         }
 
         .why-us .title_header {
-            text-transform: uppercase; 
+            text-transform: uppercase;
         }
 
         .title_paragraph {
@@ -242,8 +246,9 @@
             border: none;
             gap: 30px;
         }
+
         .why-us .grid-container {
-            padding-bottom: 100px; 
+            padding-bottom: 100px;
         }
 
         .grid-item {
@@ -270,8 +275,9 @@
             align-items: center;
             gap: 15px;
             height: auto;
-            padding:0;
+            padding: 0;
         }
+
         .icons {
             width: 48px;
             height: 47.415px;
@@ -287,8 +293,9 @@
             letter-spacing: 0.2px;
             margin: auto;
         }
+
         @media screen and (max-width: 768px) {
-           .grid-container {
+            .grid-container {
                 grid-template-columns: 100%;
                 flex-direction: column;
             }
@@ -298,12 +305,59 @@
             }
 
             .why-us .section_title {
-                padding: 75px 40px 45px ;
+                padding: 75px 40px 45px;
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
             }
         }
+
+        .bestservice {
+            background: linear-gradient(rgba(37, 43, 66, 1),
+                    rgba(22, 105, 122, 1));
+        }
+
+        .bestservice .container {
+            padding: 80px 0 80px;
+            gap: 50px;
+        }
+
+        .bestservice .title_header {
+            text-align: center;
+        }
+
+        .video-content {
+            position: relative;
+            display: inline-block;
+        }
+
+        .playbttn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--secondary-color-1, #00A0C1);
+            border-radius: 73.6px;
+            border: none;
+        }
+
+        @media screen and (max-width: 768px) {
+            .bestservice .container {
+                padding: 50px 40px 50px;
+                gap: 60px;
+                flex-direction: column;
+                align-items: center;
+                display:flex;
+            }
+
+            .video {
+                width: 306px;
+                height: 442px;
+                flex-shrink: 0;
+                object-fit: cover;
+            }
+        }
+
         .clients-say {
             background: var(--dark-background-color, #252B42);
             font-family: 'Montserrat';
@@ -386,7 +440,7 @@
             flex-direction: column;
             align-items: flex-start;
         }
-        
+
         @media screen and (max-width: 768px) {
             .clients-say {
                 padding: 0;
@@ -395,10 +449,11 @@
             .clients-say .container {
                 gap: 0;
             }
+
             .card-content {
                 width: auto;
             }
-    
+
             .clients-say .grid-container {
                 padding: 0px 40px 73px 40px;
             }
@@ -410,7 +465,7 @@
                 text-align: center;
             }
         }
-        
+
         .team {
             background: var(--dark-background-color, #252B42);
             font-family: 'Montserrat';
@@ -431,13 +486,13 @@
             padding: 0;
         }
 
-       .teamphoto {
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         align-self: stretch;
-         padding-top: 0;
-         max-width: 100%;
+        .teamphoto {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-self: stretch;
+            padding-top: 0;
+            max-width: 100%;
         }
 
         .team-card-content {
@@ -453,7 +508,7 @@
             color: var(--text-color, #252B42);
             margin: auto;
         }
-        
+
         .jobposition {
             color: var(--second-text-color, #737373);
             margin: auto;
@@ -463,10 +518,11 @@
             display: flex;
             align-items: center;
             gap: 15px;
-            margin:auto;
+            margin: auto;
         }
+
         @media screen and (max-width: 768px) {
-            .team .grid-container{
+            .team .grid-container {
                 padding: 0px 40px 90px 40px;
             }
 
@@ -478,6 +534,194 @@
                 padding: 75px 40px 45px;
                 flex-direction: column;
                 align-items: center;
+            }
+        }
+
+        .appointmentform {
+            background-image: url("Projectmaterials/formbackground.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            z-index: 1;
+        }
+
+        .appointmentform::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.50);
+            z-index: -1;
+        }
+
+        .appointmentform .container {
+            align-items: flex-start;
+        }
+
+        .appformcontent {
+            display: flex;
+            width: 700px;
+            padding: 40px 0px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        .appformheading {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .contactustext {
+            margin: 0;
+        }
+
+        .appointmenttext {
+            font-family: 'Montserrat';
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 57px;
+            letter-spacing: 0.2px;
+            margin: 0;
+        }
+
+        .actionform {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: repeat(3, auto);
+            gap: 20px;
+            justify-content: left;
+        }
+
+        .name-and-email {
+            grid-auto-flow: row;
+            width: 285px;
+            height: 50px;
+            border-radius: 5px;
+            color: var(--muted-color, #BDBDBD);
+            border: 1px solid var(--muted-color, #BDBDBD);
+        }
+
+        .date-and-time {
+            display: inline-flex;
+            flex-direction: row;
+            width: 285px;
+            height: 50px;
+            border-radius: 5px;
+            color: var(--muted-color, #BDBDBD);
+            border: 1px solid var(--muted-color, #BDBDBD);
+        }
+
+        .textarea {
+            display: flex;
+            font-family: "Montserrat";
+            grid-column: 1 / span 2;
+            height: 140px;
+            align-items: center;
+            border-radius: 5px;
+            color: var(--muted-color, #BDBDBD);
+            border: 1px solid var(--muted-color, #BDBDBD);
+        }
+
+        #formstatus {
+            font-size: 7px;
+            color: #BDBDBD;
+            display: flex;
+            margin:0;
+        }
+
+        .bttn-appointment {
+            display: flex;
+            padding: 15px 40px;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 5px;
+            background: var(--primary-color, #FFA62B);
+            color: white;
+            border: none;
+        }
+        
+        .appform_secondary .container {
+            align-items: flex-start;
+        }
+
+        .appform_secondcontent {
+            padding: 40px 0 40px;
+            display: flex;
+            align-items: flex-start;
+            gap: 360px;
+        }
+
+        .appform_secondheading {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .appform_secondheading .card_body {
+            margin: 0;
+        }
+
+        .consulting {
+            color: var(--text-color, #252B42);
+            font-size: 24px;
+            line-height: 32px;
+            margin: auto;
+        }
+
+        .contactus {
+            display: flex;
+            padding: 15px 40px;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            border-radius: 5px;
+            background: var(--primary-color, #FFA62B);
+            border: none;
+            color: white;
+        }
+
+        @media screen and (max-width: 768px) {
+            .appformcontent {
+                width: auto;
+                padding: 75px 40px 45px;
+            }
+
+            .actionform {
+                width: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+
+            .textarea {
+                display: flex;
+                width: auto;
+                height: 140px;
+                align-items: center;
+                padding: 0;
+            }
+
+            .appform_secondcontent {
+                display: flex;
+                width: auto;
+                flex-direction: column;
+                align-items: center;
+                gap: 50px;
+            }
+
+            .appform_secondheading {
+                padding: 40px 60px 0px;
+                flex-direction: column;
+                align-items: flex-start;
             }
         }
 
@@ -499,8 +743,8 @@
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: auto;
             grid-template-areas: 'logo socials'
-                                 'divider divider'
-                                 'main main';
+                'divider divider'
+                'main main';
         }
 
         .footer_logo {
@@ -566,6 +810,7 @@
             font-weight: 500;
             color: var(--footer-nav-link);
         }
+
         .footer_subscription {
             flex-grow: 1;
         }
@@ -585,10 +830,11 @@
             flex-grow: 1;
             padding: 0 20px;
         }
-         input::placeholder {
+
+        input::placeholder {
             color: var(--footer-nav-link);
             font-size: 14px;
-         }
+        }
 
         .subscription_form .form_submit {
             border: none;
@@ -598,10 +844,10 @@
             letter-spacing: 1px;
             padding: 0 22px;
         }
+
         .subscription_comment {
             font-size: 12px;
             color: var(--footer-nav-link);
-            font-size: 12px;
         }
 
         @media screen and (max-width: 768px) {
@@ -610,31 +856,35 @@
             }
 
             .footer_content {
-                grid-template-areas:'logo'
-                                    'socials'
-                                    'main';
+                grid-template-areas: 'logo'
+                    'socials'
+                    'main';
                 gap: 50px;
                 padding: 50px 0 70px;
             }
+
             .footer_main {
                 flex-direction: column;
-                margin:0;
+                margin: 0;
             }
+
             .footer_nav {
                 flex-direction: column;
             }
+
             .footer_socials {
                 margin: 0;
                 justify-self: initial;
             }
+
             .footer_logo {
-                margin:0;
+                margin: 0;
             }
+
             .footer_secondary {
                 text-align: center;
             }
         }
-
     </style>
 </head>
 
@@ -730,79 +980,92 @@
             </div>
         </div>
     </section>
-</section>
-<section class="clients-say">
-    <div class="container">
-        <div class="section_title">
-            <h2 class="title_header">What Clients Say</h2>
-            <p class="title_paragraph">Problems trying to resolve the conflict between the two major realms of
-                Classical physics: Newtonian mechanics</p>
+    </section>
+    <section class="bestservice">
+        <div class="container">
+            <div class="section_title">
+                <h2 class="title_header">We are providing best business service.</h2>
+                <p class="title_paragraph">Problems trying to resolve the conflict between the two major realms of
+                    Classical physics: Newtonian mechanics</p>
+            </div>
+            <div class="video-content">
+                <button class="playbttn"><img src="Projectmaterials\playbutton.svg" alt="playbttn"></button>
+                <img src="Projectmaterials\officephoto.jpg" alt="office" class="video">
+            </div>
         </div>
-        <div class="grid-container">
-            <div class="grid-item">
-                <div class="card-content">
-                    <div class="starbar">
-                        <img src="Projectmaterials\star.svg" alt="star" class="stars">
-                        <img src="Projectmaterials\star.svg" alt="star" class="stars">
-                        <img src="Projectmaterials\star.svg" alt="star" class="stars">
-                        <img src="Projectmaterials\star.svg" alt="star" class="stars">
-                        <img src="Projectmaterials\empty star.svg" alt="star" class="stars">
-                    </div>
-                    <p class="card_body"> Slate helps you see how many more days you need to work to reach your
-                        financial goal.
-                    </p>
-                    <div class="clientpresentation">
-                        <img src="Projectmaterials\firstclient.png" alt="lady" class="clients">
-                        <div class="clientinfo">
-                            <a href="#rMiles" class="clientname">Regina Miles</a>
-                            <h6 class="clientjob">Designer</h6>
+    </section>
+    <section class="clients-say">
+        <div class="container">
+            <div class="section_title">
+                <h2 class="title_header">What Clients Say</h2>
+                <p class="title_paragraph">Problems trying to resolve the conflict between the two major realms of
+                    Classical physics: Newtonian mechanics</p>
+            </div>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <div class="card-content">
+                        <div class="starbar">
+                            <img src="Projectmaterials\star.svg" alt="star" class="stars">
+                            <img src="Projectmaterials\star.svg" alt="star" class="stars">
+                            <img src="Projectmaterials\star.svg" alt="star" class="stars">
+                            <img src="Projectmaterials\star.svg" alt="star" class="stars">
+                            <img src="Projectmaterials\empty star.svg" alt="star" class="stars">
+                        </div>
+                        <p class="card_body"> Slate helps you see how many more days you need to work to reach your
+                            financial goal.
+                        </p>
+                        <div class="clientpresentation">
+                            <img src="Projectmaterials\firstclient.png" alt="lady" class="clients">
+                            <div class="clientinfo">
+                                <a href="#rMiles" class="clientname">Regina Miles</a>
+                                <h6 class="clientjob">Designer</h6>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="grid-item">
-                <div class="card-content">
-                    <div class="starbar">
-                        <img src="Projectmaterials\star.svg" alt="star" class="stars">
-                        <img src="Projectmaterials\star.svg" alt="star" class="stars">
-                        <img src="Projectmaterials\star.svg" alt="star" class="stars">
-                        <img src="Projectmaterials\star.svg" alt="star" class="stars">
-                        <img src="Projectmaterials\empty star.svg" alt="star" class="stars">
-                    </div>
-                    <p class="card_body"> Slate helps you see how many more days you need to work to reach your
-                        financial goal.
-                    </p>
-                    <div class="clientpresentation">
-                        <img src="Projectmaterials\secondclient.png" alt="secondlady" class="clients">
-                        <div class="clientinfo">
-                            <a href="#rMiles" class="clientname">Regina Miles</a>
-                            <h6 class="clientjob">Designer</h6>
+                <div class="grid-item">
+                    <div class="card-content">
+                        <div class="starbar">
+                            <img src="Projectmaterials\star.svg" alt="star" class="stars">
+                            <img src="Projectmaterials\star.svg" alt="star" class="stars">
+                            <img src="Projectmaterials\star.svg" alt="star" class="stars">
+                            <img src="Projectmaterials\star.svg" alt="star" class="stars">
+                            <img src="Projectmaterials\empty star.svg" alt="star" class="stars">
+                        </div>
+                        <p class="card_body"> Slate helps you see how many more days you need to work to reach your
+                            financial goal.
+                        </p>
+                        <div class="clientpresentation">
+                            <img src="Projectmaterials\secondclient.png" alt="secondlady" class="clients">
+                            <div class="clientinfo">
+                                <a href="#rMiles" class="clientname">Regina Miles</a>
+                                <h6 class="clientjob">Designer</h6>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="grid-item">
-                <div class="card-content">
-                    <div class="starbar">
-                        <img src="Projectmaterials\star.svg" alt="star" class="stars">
-                        <img src="Projectmaterials\star.svg" alt="star" class="stars">
-                        <img src="Projectmaterials\star.svg" alt="star" class="stars">
-                        <img src="Projectmaterials\star.svg" alt="star" class="stars">
-                        <img src="Project \empty star.svg" alt="star" class="stars">
-                    </div>
-                    <p class="card_body"> Slate helps you see how many more days you need to work to reach your
-                        financial goal.
-                    </p>
-                    <div class="clientpresentation">
-                        <img src="Projectmaterials\thirdclient.png" alt="sir" class="clients">
-                        <div class="clientinfo">
-                            <a href="#rMiles" class="clientname">Regina Miles</a>
-                            <h6 class="clientjob">Designer</h6>
+                <div class="grid-item">
+                    <div class="card-content">
+                        <div class="starbar">
+                            <img src="Projectmaterials\star.svg" alt="star" class="stars">
+                            <img src="Projectmaterials\star.svg" alt="star" class="stars">
+                            <img src="Projectmaterials\star.svg" alt="star" class="stars">
+                            <img src="Projectmaterials\star.svg" alt="star" class="stars">
+                            <img src="Projectmaterials\empty star.svg" alt="star" class="stars">
+                        </div>
+                        <p class="card_body"> Slate helps you see how many more days you need to work to reach your
+                            financial goal.
+                        </p>
+                        <div class="clientpresentation">
+                            <img src="Projectmaterials\thirdclient.png" alt="sir" class="clients">
+                            <div class="clientinfo">
+                                <a href="#rMiles" class="clientname">Regina Miles</a>
+                                <h6 class="clientjob">Designer</h6>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-</section>
+    </section>
     <section class="team">
         <div class="container">
             <div class="section_title">
@@ -813,9 +1076,9 @@
             <div class="grid-container">
                 <div class="grid-item">
                     <div class="teamphoto">
-                        <img src="Projectmaterials\AshleyFletcher.jpg" alt="Ashley Fletcher" >
+                        <img src="Projectmaterials\AshleyFletcher.jpg" alt="Ashley Fletcher">
                     </div>
-                     <div class="team-card-content">
+                    <div class="team-card-content">
                         <h5 class="emplname">Ashley Fletcher</h5>
                         <h6 class="jobposition">CEO</h6>
                         <ul class="team_socials">
@@ -832,11 +1095,11 @@
                                 <img src="Projectmaterials\teamtwitter.svg" alt="Tweeter_logo" class="socials_team">
                             </li>
                         </ul>
-                     </div>
-               </div>
+                    </div>
+                </div>
                 <div class="grid-item">
                     <div class="teamphoto">
-                        <img src="Projectmaterials\RodneyStratton.jpg" alt="Rodney Stratton" >
+                        <img src="Projectmaterials\RodneyStratton.jpg" alt="Rodney Stratton">
                     </div>
                     <div class="team-card-content">
                         <h5 class="emplname">Rodney Stratton</h5>
@@ -880,7 +1143,60 @@
                         </ul>
                     </div>
                 </div>
-           </div>
+            </div>
+        </div>
+    </section>
+    <section class="appointmentform">
+        <div class="container">
+            <div class="appformcontent">
+                <div class="appformheading">
+                    <h5 class="contactustext">Contact Us</h5>
+                    <h2 class="appointmenttext">Make an Appointment</h2>
+                </div>
+                <form class="actionform">
+                    <input class="name-and-email name" type="text"  name="fullname" placeholder="Full Name" required>
+                    <input class="name-and-email email" type="email"  name="email" placeholder="example@gmail.com" pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-zA-Z]{2,4}" required>
+                    <p id = "formstatus"> Please enter a value</p>
+                    <p id = "formstatus"> Please enter a value</p>
+                    <select class="date-and-time" name="date">
+                        <option value="">Please Select</option>
+                        <option value="mo">Monday</option>
+                        <option value="tu">Tuesday</option>
+                        <option value="we">Wednesday</option>
+                        <option value="th">Thursday</option>
+                        <option value="fr">Friday</option>
+                    </select>
+                    <select class="date-and-time" name="time">
+                        <option value="">4:00 Available</option>
+                        <option value="8am">8am</option>
+                        <option value="9am">8am</option>
+                        <option value="10am">8am</option>
+                        <option value="11am">8am</option>
+                        <option value="1pm">12am</option>
+                        <option value="3pm">3pm</option>
+                    </select>
+                    <p id = "formstatus"> Please enter a value</p>
+                    <p id = "formstatus"> Please enter a value</p>
+                    <textarea class="textarea" name="message" id="message" rows="5" cols="20" placeholder="Message"></textarea>
+                    <p id = "formstatus"> Please enter a value</p>
+                </form> 
+                  <div>
+                    <button class="bttn-appointment" type="submit">Book Appointment</button>
+                  </div>
+            </div>
+        </div>
+    </section>
+    <section class="appform_secondary">
+        <div class="container">
+            <div class="appform_secondcontent">
+                <div class="appform_secondheading">
+                    <h3 class="consulting">Consulting Agency For Your Business</h3>
+                    <p class="card_body">the quick fox jumps over the lazy dog</p>
+                </div>
+                <div>
+                    <button class="contactus">Contact us</button>
+                </div>
+            </div>
         </div>
     </section>
     <footer class="footer">
