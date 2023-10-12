@@ -7,7 +7,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <script src="script.js"></script>
     <script src="index.js"></script>
     <style>
         body {
@@ -595,11 +594,12 @@
             display: grid;
             grid-template-columns: auto auto;
             grid-template-rows: repeat(3, auto);
-            gap: 20px;
+            gap: 10px;
             justify-content: left;
         }
 
         .name-and-email {
+            display: inline-flex;
             grid-auto-flow: row;
             width: 285px;
             height: 50px;
@@ -629,13 +629,10 @@
             border: 1px solid var(--muted-color, #BDBDBD);
         }
 
-        #formstatus {
-            font-size: 7px;
-            color: #BDBDBD;
-            display: flex;
-            margin:0;
+        .form-result {
+            font-size: 10px;
         }
-
+        
         .bttn-appointment {
             display: flex;
             padding: 15px 40px;
@@ -980,7 +977,6 @@
             </div>
         </div>
     </section>
-    </section>
     <section class="bestservice">
         <div class="container">
             <div class="section_title">
@@ -1153,32 +1149,24 @@
                     <h5 class="contactustext">Contact Us</h5>
                     <h2 class="appointmenttext">Make an Appointment</h2>
                 </div>
-                <form class="actionform">
-                    <input class="name-and-email name" type="text"  name="fullname" placeholder="Full Name" required>
-                    <input class="name-and-email email" type="email"  name="email" placeholder="example@gmail.com" pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-zA-Z]{2,4}" required>
-                    <p id = "formstatus"> Please enter a value</p>
-                    <p id = "formstatus"> Please enter a value</p>
-                    <select class="date-and-time" name="date">
-                        <option value="">Please Select</option>
-                        <option value="mo">Monday</option>
-                        <option value="tu">Tuesday</option>
-                        <option value="we">Wednesday</option>
-                        <option value="th">Thursday</option>
-                        <option value="fr">Friday</option>
-                    </select>
-                    <select class="date-and-time" name="time">
+                <form class="actionform" id="contact-form">
+                    <input class="name-and-email" id="form-name" type="text"  name="fullname" placeholder="Full Name" required>
+                    <input class="name-and-email" id="form-email"type="email" name="email" placeholder="example@gmail.com" pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-zA-Z]{2,4}" required>
+                    <p id="resultFullName" class="form-result"></p>
+                    <p id="resultEmail" class="form-result"></p>
+                    <input type="date" class="date-and-time" name="date" id="form-date">
+                    <select class="date-and-time" name="time" id="form-time">
                         <option value="">4:00 Available</option>
                         <option value="8am">8am</option>
-                        <option value="9am">8am</option>
-                        <option value="10am">8am</option>
-                        <option value="11am">8am</option>
-                        <option value="1pm">12am</option>
-                        <option value="3pm">3pm</option>
+                        <option value="9am">9am</option>
+                        <option value="10am">10am</option>
+                        <option value="11am">11am</option>
+                        <option value="1pm">1pm</option>
                     </select>
-                    <p id = "formstatus"> Please enter a value</p>
-                    <p id = "formstatus"> Please enter a value</p>
-                    <textarea class="textarea" name="message" id="message" rows="5" cols="20" placeholder="Message"></textarea>
-                    <p id = "formstatus"> Please enter a value</p>
+                    <p id="resultSelectDate" class="form-result"></p>
+                    <p id="resultSelectTime" class="form-result"></p>
+                    <textarea class="textarea" name="message" id="form-message" rows="5" cols="20" placeholder="Message"></textarea>
+                    <p id="resultMessage" class="form-result"></p> 
                 </form> 
                   <div>
                     <button class="bttn-appointment" type="submit">Book Appointment</button>
