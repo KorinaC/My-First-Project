@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>KMarketer</title>
@@ -633,6 +632,13 @@
             grid-column: 1 / span 2; 
         }
 
+        .actionform.success .form-result {
+            color: green;
+        }
+        
+        .actionform.error .form-result {
+            color: red;
+        }
         .form-result {
             font-size: 10px;
             display: inline-flex;
@@ -1157,7 +1163,7 @@
                 </div>
                 <form class="actionform" id="contact-form">
                     <input class="name-and-email" id="form-name" type="text"  name="fullname" placeholder="Full Name" required>
-                    <input class="name-and-email" id="form-email"type="email" name="email" placeholder="example@gmail.com" pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-zA-Z]{2,4}" required>
+                    <input class="name-and-email" id="form-email"type="email" name="email" placeholder="example@gmail.com" required>
                     <p id="resultFullName" class="form-result"></p>
                     <p id="resultEmail" class="form-result"></p>
                     <input type="date" class="date-and-time" name="date" id="form-date">
