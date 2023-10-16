@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <script src="index.js"></script>
+    <script src="script.js"></script>
     <style>
         body {
             --bttn-primary-bg: #FFA62B;
@@ -600,7 +600,7 @@
 
         .name-and-email {
             display: inline-flex;
-            grid-auto-flow: row;
+            flex-direction: row;
             width: 285px;
             height: 50px;
             border-radius: 5px;
@@ -629,8 +629,14 @@
             border: 1px solid var(--muted-color, #BDBDBD);
         }
 
+        #resultMessage {
+            grid-column: 1 / span 2; 
+        }
+
         .form-result {
             font-size: 10px;
+            display: inline-flex;
+            flex-direction: row;
         }
         
         .bttn-appointment {
@@ -1167,10 +1173,10 @@
                     <p id="resultSelectTime" class="form-result"></p>
                     <textarea class="textarea" name="message" id="form-message" rows="5" cols="20" placeholder="Message"></textarea>
                     <p id="resultMessage" class="form-result"></p> 
-                </form> 
                   <div>
                     <button class="bttn-appointment" type="submit">Book Appointment</button>
                   </div>
+                </form>  
             </div>
         </div>
     </section>
