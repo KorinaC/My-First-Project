@@ -643,6 +643,7 @@
             font-size: 10px;
             display: inline-flex;
             flex-direction: row;
+            font-weight: 200px;
         }
         
         .bttn-appointment {
@@ -1162,12 +1163,12 @@
                     <h2 class="appointmenttext">Make an Appointment</h2>
                 </div>
                 <form class="actionform" id="contact-form">
-                    <input class="name-and-email" id="form-name" type="text"  name="fullname" placeholder="Full Name" required>
-                    <input class="name-and-email" id="form-email"type="email" name="email" placeholder="example@gmail.com" required>
+                    <input class="name-and-email" id="inputFullName" type="text"  name="fullname" placeholder="Full Name" required>
+                    <input class="name-and-email" id="inputEmail"type="email" name="email" placeholder="example@gmail.com" required>
                     <p id="resultFullName" class="form-result"></p>
                     <p id="resultEmail" class="form-result"></p>
-                    <input type="date" class="date-and-time" name="date" id="form-date">
-                    <select class="date-and-time" name="time" id="form-time">
+                    <input type="date" class="date-and-time" name="date" id="inputSelectDate">
+                    <select class="date-and-time" name="time" id="inputSelectTime">
                         <option value="">4:00 Available</option>
                         <option value="8am">8am</option>
                         <option value="9am">9am</option>
@@ -1177,7 +1178,7 @@
                     </select>
                     <p id="resultSelectDate" class="form-result"></p>
                     <p id="resultSelectTime" class="form-result"></p>
-                    <textarea class="textarea" name="message" id="form-message" rows="5" cols="20" placeholder="Message"></textarea>
+                    <textarea class="textarea" name="message" id="inputMessage" rows="5" cols="20" placeholder="Message"></textarea>
                     <p id="resultMessage" class="form-result"></p> 
                   <div>
                     <button class="bttn-appointment" type="submit">Book Appointment</button>

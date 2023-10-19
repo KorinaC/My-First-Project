@@ -682,156 +682,140 @@ console.log(findOutlier(oddNum));
 
 //Homework 23//
 
-// document.addEventListener('DOMContentLoaded', function() {
-// const form = document.getElementById('myForm');
-// const nameInput = document.getElementById('name');
-// const emailInput = document.getElementById('email');
-// const messageInput = document.getElementById('message');
-// const statusMessage = document.getElementById('formstaus');
-// form.addEventListener('submit', handleSubmit);
-
-// function isValidName(name) {
-//   return name.length >= 2;
-// };
-
-// function isValidMessage(message) {
-//   const words = message.trim().split(/\s+/);
-//   return words.length >= 3;
-// };
-
-// function handleSubmit(event) {
-//   event.preventDefault();
-
-//   const name = nameInput.value;
-
-//   if (isValidName(name)) {
-//     statusMessage.textContent = 'Name was registered';
-//     statusMessage.style.color = 'green';
-//     form.submit();
-//   } else {
-//     statusMessage.textContent = 'Name is required and it must have at least 3 letters.';
-//     statusMessage.style.color = 'red';
-//   }
-
-//   const email = emailInput.value;
-
-//   if (isValidEmail(email)) {
-//     statusMessage.textContent = `Email ${emai} was registered`;
-//     statusMessage.style.color = 'green';
-//     form.submit();
-//   } else {
-//     statusMessage.textContent = 'Please enter a valid email address.';
-//     statusMessage.style.color = 'red';
-//   }
-
-//   const message = messageInput.value; 
-
-//   if (isValidMessage (message)) {
-//     statusMessage.textContent = 'Message was registered';
-//     statusMessage.style.color = 'green';
-//     form.submit();
-//   } else {
-//     statusMessage.textContent = 'Message is required and it must have least 3 words .';
-//     statusMessage.style.color = 'red';
-//   }
-// }
-// });
-
-document.addEventListener('DOMContentLoaded', function () {
-    let form = document.getElementById('contact-form');
-    let inputFullName = document.getElementById('form-name');
-    let inputEmail = document.getElementById('form-email');
-    let inputSelectDate = document.getElementById('form-date');
-    let inputSelectTime = document.getElementById('form-time');
-    let inputMessage = document.getElementById('form-message');
+// document.addEventListener('DOMContentLoaded', function () {
+//     let form = document.getElementById('contact-form');
+//     let inputFullName = document.getElementById('inputFullName');
+//     let inputEmail = document.getElementById('inputEmail');
+//     let inputSelectDate = document.getElementById('inputSelectDate');
+//     let inputSelectTime = document.getElementById('inputSelectTime');
+//     let inputMessage = document.getElementById('inputMessage');
   
-    form.addEventListener('submit', handleSubmit);
+//     form.addEventListener('submit', handleSubmit);
   
-    function handleSubmit(event) {
-      event.preventDefault();
+//     function handleSubmit(event) {
+//       event.preventDefault();
   
-      let formElements = [
-        {
-          element: inputFullName,
-          properties: {
-            value: inputFullName.value,
-            successLabel: 'Name was registered',
-            errorLabel: 'Name is required and it must have at least 3 letters',
-            condition: inputFullName.value.length > 2,
-          },
-        },
-        {
-          element: inputEmail,
-          properties: {
-            value: inputEmail.value,
-            successLabel: 'Email was registered',
-            errorLabel: 'Please enter a valid email address',
-            condition: !!inputEmail.value,
-          },
-        },
-        {
-          element: inputSelectDate,
-          properties: {
-            value: inputSelectDate.value,
-            successLabel: `Your meeting is scheduled on  ${inputSelectDate.value}`,
-            errorLabel: 'Please select a date to schedule a meeting',
-            condition: !!inputSelectDate.value,
-          },
-        },
-        {
-          element: inputSelectTime,
-          properties: {
-            value: inputSelectTime.value,
-            errorLabel: 'Please select time to schedule a meeting',
-            condition: inputSelectTime.value !== 'select',
-          },
-        },
-        {
-          element: inputMessage,
-          properties: {
-            value: inputMessage.value,
-            successLabel: 'Message was registered',
-            errorLabel: 'Message is required and it must have at least 3 words',
-            condition: inputMessage.value.length > 3,
-          },
-        },
-      ];
+//       let formElements = [
+//         {
+//           element: inputFullName,
+//           properties: {
+//             value: inputFullName.value,
+//             successLabel: 'Name was registered',
+//             errorLabel: 'Name is required and it must have at least 3 letters',
+//             condition: inputFullName.value.length > 2,
+//           },
+//         },
+//         {
+//           element: inputEmail,
+//           properties: {
+//             value: inputEmail.value,
+//             successLabel: 'Email was registered',
+//             errorLabel: 'Please enter a valid email address',
+//             condition: !!inputEmail.value,
+//           },
+//         },
+//         {
+//           element: inputSelectDate,
+//           properties: {
+//             value: inputSelectDate.value,
+//             successLabel: `Your meeting is scheduled on  ${inputSelectDate.value}`,
+//             errorLabel: 'Please select a date to schedule a meeting',
+//             condition: !!inputSelectDate.value,
+//           },
+//         },
+//         {
+//           element: inputSelectTime,
+//           properties: {
+//             value: inputSelectTime.value,
+//             successLabel: `Your meeting is scheduled at ${inputSelectTime.value}`,
+//             errorLabel: 'Please select time to schedule a meeting',
+//             condition: inputSelectTime.value !== 'select',
+//           },
+//         },
+//         {
+//           element: inputMessage,
+//           properties: {
+//             value: inputMessage.value,
+//             successLabel: 'Message was registered',
+//             errorLabel: 'Message is required and it must have at least 3 words',
+//             condition: inputMessage.value.length > 3,
+//           },
+//         },
+//       ];
   
-      const resetClass = (element) => {
-        // Convert the DOMTokenList to an array
-        let classes = [...element.classList];
+//       const resetClass = (element) => {
+//         // Convert the DOMTokenList to an array
+//         let classes = [...element.classList];
   
-        // Loop through each class
-        for (let className of classes) {
-          // If the current class is not the one to keep, remove it
-          if (className !== 'actionform') {
-            element.classList.remove(className);
-          }
-        }
-      };
+//         // Loop through each class
+//         for (let className of classes) {
+//           // If the current class is not the one to keep, remove it
+//           if (className !== 'actionform') {
+//             element.classList.remove(className);
+//           }
+//         }
+//       };
 
-      const handleSuccess = (element, label = '') => {
-        element.querySelector('.form-result').textContent = label;
-        element.classList.add('success');
-      };
-      const handleError = (element, label = '') => {
-        element.querySelector('.form-result').textContent = label;
-        element.classList.add('error');
-      };
+//       const handleSuccess = (element, label = '') => {
+//         element.querySelector('.form-result').textContent = label;
+//         element.classList.add('success');
+//       };
+//       const handleError = (element, label = '') => {
+//         element.querySelector('.form-result').textContent = label;
+//         element.classList.add('error');
+//       };
 
-      const validateElement = (item) => {
-        const { element, properties } = item;
+//       const validateElement = (item) => {
+//         const { element, properties } = item;
   
-        let elementWrapper = element.parentElement;
-        resetClass(elementWrapper);
-        if (properties.condition) {
-          handleSuccess(elementWrapper, properties.successLabel);
-        } else {
-          handleError(elementWrapper, properties.errorLabel);
-        }
-      };
+//         let elementWrapper = element.parentElement;
+//         resetClass(elementWrapper);
+//         if (properties.condition) {
+//           handleSuccess(elementWrapper, properties.successLabel);
+//         } else {
+//           handleError(elementWrapper, properties.errorLabel);
+//         }
+//       };
   
-      formElements.forEach((item) => validateElement(item));
-    }
+//       formElements.forEach((item) => validateElement(item));
+//     }
+//   });
+
+  // Homework 24 //
+
+ fetch('https://jsonplaceholder.typicode.com/users')
+  .then(response => response.json())
+  .then(users => {
+    const userWithId3 = users.find(user => user.id === 3);
+    console.log(userWithId3);
+  })
+  .catch(error => {
+    console.error('Error:', error);
   });
+
+  const usersUrls = [
+    'https://jsonplaceholder.typicode.com/users/3' 
+  ];
+
+  const getArticles = async () => {
+    let response = await fetch('https://jsonplaceholder.typicode.com/users/3');
+    let user = await response.json();
+
+    let postsResponse = await fetch (
+        `https://jsonplaceholder.typicode.com/posts?userId=${user.id}`
+    );
+    let posts = await postsResponse.json();
+
+    console.log(posts);
+
+    let commentsResponse = await fetch (
+        `https://jsonplaceholder.typicode.com/comments?userId=${user.id}`
+    );
+    let comments = await commentsResponse.json()
+    console.log(comments);
+  };
+
+ getArticles();
+
+
 
