@@ -750,7 +750,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Loop through each class
         for (let className of classes) {
           // If the current class is not the one to keep, remove it
-          if (className !== 'actionform') {
+          if (className !== 'input-and-result') {
             element.classList.remove(className);
           }
         }
