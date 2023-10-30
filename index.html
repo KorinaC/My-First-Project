@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>KMarketer</title>
@@ -345,7 +346,7 @@
                 gap: 60px;
                 flex-direction: column;
                 align-items: center;
-                display:flex;
+                display: flex;
             }
 
             .video {
@@ -593,7 +594,7 @@
             display: grid;
             grid-template-columns: auto auto;
             grid-template-rows: repeat(3, auto);
-            gap: 10px;
+            gap: 20px;
             justify-content: left;
         }
 
@@ -629,23 +630,23 @@
         }
 
         #resultMessage {
-            grid-column: 1 / span 2; 
+            grid-column: 1 / span 2;
         }
 
         .actionform.success .form-result {
             color: green;
         }
-        
+
         .actionform.error .form-result {
             color: red;
         }
+
         .form-result {
             font-size: 10px;
-            display: inline-flex;
             flex-direction: row;
             font-weight: 200px;
         }
-        
+
         .bttn-appointment {
             display: flex;
             padding: 15px 40px;
@@ -656,7 +657,7 @@
             color: white;
             border: none;
         }
-        
+
         .appform_secondary .container {
             align-items: flex-start;
         }
@@ -1163,27 +1164,36 @@
                     <h2 class="appointmenttext">Make an Appointment</h2>
                 </div>
                 <form class="actionform" id="contact-form">
-                    <input class="name-and-email" id="inputFullName" type="text"  name="fullname" placeholder="Full Name" required>
-                    <input class="name-and-email" id="inputEmail"type="email" name="email" placeholder="example@gmail.com" required>
-                    <p id="resultFullName" class="form-result"></p>
-                    <p id="resultEmail" class="form-result"></p>
-                    <input type="date" class="date-and-time" name="date" id="inputSelectDate">
-                    <select class="date-and-time" name="time" id="inputSelectTime">
-                        <option value="">4:00 Available</option>
-                        <option value="8am">8am</option>
-                        <option value="9am">9am</option>
-                        <option value="10am">10am</option>
-                        <option value="11am">11am</option>
-                        <option value="1pm">1pm</option>
-                    </select>
-                    <p id="resultSelectDate" class="form-result"></p>
-                    <p id="resultSelectTime" class="form-result"></p>
-                    <textarea class="textarea" name="message" id="inputMessage" rows="5" cols="20" placeholder="Message"></textarea>
-                    <p id="resultMessage" class="form-result"></p> 
-                  <div>
+                    <div class="input-and-result">
+                        <input class="name-and-email" id="inputFullName" type="text" name="fullname"
+                            placeholder="Full Name" required>
+                        <p id="resultFullName" class="form-result"></p>
+                    </div>
+                    <div class="input-and-result">
+                        <input class="name-and-email" id="inputEmail" type="email" name="email"
+                            placeholder="example@gmail.com" required>
+                        <p id="resultEmail" class="form-result"></p>
+                    </div>
+                    <div class="input-and-result">
+                        <input type="date" class="date-and-time" name="date" id="inputSelectDate">
+                        <p id="resultSelectDate" class="form-result"></p>
+                    </div>
+                    <div class="input-and-result">
+                        <select class="date-and-time" name="time" id="inputSelectTime">
+                            <option value="">4:00 Available</option>
+                            <option value="8am">8am</option>
+                            <option value="9am">9am</option>
+                            <option value="10am">10am</option>
+                            <option value="11am">11am</option>
+                            <option value="1pm">1pm</option>
+                        </select>
+                        <p id="resultSelectTime" class="form-result"></p>
+                    </div>
+                        <textarea class="textarea" name="message" id="inputMessage" rows="5" cols="20"
+                            placeholder="Message"></textarea>
+                        <p id="resultMessage" class="form-result"></p>
                     <button class="bttn-appointment" type="submit">Book Appointment</button>
-                  </div>
-                </form>  
+                </form>
             </div>
         </div>
     </section>
@@ -1315,4 +1325,5 @@
         </section>
     </footer>
 </body>
+
 </html>
