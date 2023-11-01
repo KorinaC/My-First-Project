@@ -859,3 +859,94 @@ document.addEventListener('DOMContentLoaded', function () {
 //       console.error('Error:', error);
 //     });
 
+// Homework 25 //
+
+const string = "Today I went to the shop 123 and bought 4 bananas.";
+const numbersArray = string.match(/\d+/g);
+console.log(numbersArray);
+
+const phrase = "City postal codes: 12345, 98765, 54321";
+const postalCodeRegex = /\b\d{5}\b/g;
+const validPostalCodes = phrase.match(postalCodeRegex);
+
+if (validPostalCodes) {
+  console.log("Right postal codes:", validPostalCodes);
+} else {
+  console.log("No right postal code.");
+};
+
+
+const movies = `1 The Shawshank Redemption (1994),
+2 The Godfather (1972),
+3 The Godfather: Part II (1974),
+4 Pulp Fiction (1994),
+5 The Good, the Bad and the Ugly (1966),
+6 The Dark Knight (2008),
+7 12 Angry Men (1957),
+8 Schindler's List (1993),
+9 The Lord of the Rings: The Return of the King (2003),
+10 Fight Club (1999)`;
+
+const allMoviesPatter = /\b((19\d{2}|20\d{2})\d{1,2})\s(.+)/g;
+const matches = movies.match(allMoviesPatter);
+
+if (matches) {
+  const moviesAfter1990 = matches.filter(match => parseInt(match.split(" ")[1]) > 1990);
+  const movieNames = moviesAfter1990.map(match => match.replace(allMoviesPatter, "$3"));
+  
+  console.log(movieNames)
+};
+
+//V2//
+
+const allMovies = ["1 The Shawshank Redemption (1994)",
+"2 The Godfather (1972)",
+"3 The Godfather: Part II (1974)",
+"4 Pulp Fiction (1994)",
+"5 The Good, the Bad and the Ugly (1966)",
+"6 The Dark Knight (2008)",
+"7 12 Angry Men (1957)",
+"8 Schindler's List (1993)",
+"9 The Lord of the Rings: The Return of the King (2003)",
+"10 Fight Club (1999)"];
+
+const moviesPattern = /\d{4}/g;
+
+allMovies.forEach(movie => {
+  const moviesYear = movie.match(moviesPattern)[0]
+
+  if(moviesYear> 1990) {
+    console.log(movie)
+  }
+})
+
+const data = `
+AliceBlue #F0F8FF
+AntiqueWhite #FAEBD7
+Aqua #00FFFF
+Aquamarine #7FFFD4
+Azure #F0FFFF
+12 bit:
+White #FFF
+Red #F00
+Green #0F0
+Blue #00F
+`;
+
+const dataPattern = /#[0-9A-Fa-f]{6}\b/g;
+const dataMatches = data.match(dataPattern);
+
+if (dataMatches) {
+  console.log(dataMatches);
+}
+
+
+
+
+
+
+
+
+
+
+
