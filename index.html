@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <script src="script.js"></script>
-    <script src="index.js"></script>
     <style>
         body {
             --bttn-primary-bg: #FFA62B;
@@ -347,7 +346,7 @@
                 gap: 60px;
                 flex-direction: column;
                 align-items: center;
-                display:flex;
+                display: flex;
             }
 
             .video {
@@ -592,15 +591,20 @@
         }
 
         .actionform {
-            display: grid;
-            grid-template-columns: auto auto;
-            grid-template-rows: repeat(3, auto);
             gap: 20px;
             justify-content: left;
         }
 
+        .form-container {
+            display: grid;
+            gap:20px;
+            grid-template-columns: auto auto;
+            grid-template-rows: repeat(2, auto);
+        }
+
         .name-and-email {
-            grid-auto-flow: row;
+            display: inline-flex;
+            flex-direction: row;
             width: 285px;
             height: 50px;
             border-radius: 5px;
@@ -617,6 +621,10 @@
             color: var(--muted-color, #BDBDBD);
             border: 1px solid var(--muted-color, #BDBDBD);
         }
+        
+        .input-and-result {
+            display:grid;
+        }
 
         .textarea {
             display: flex;
@@ -629,15 +637,27 @@
             border: 1px solid var(--muted-color, #BDBDBD);
         }
 
-        #formstatus {
-            font-size: 7px;
-            color: #BDBDBD;
-            display: flex;
-            margin:0;
+        #resultMessage {
+            grid-column: 1 / span 2;
+        }
+
+        .input-and-result.success .form-result {
+            color: green;
+        }
+
+        .input-and-result.error .form-result {
+            color: red;
+        }
+
+        .form-result {
+            font-size: 10px;
+            flex-direction: row;
+            font-weight: 200px;
         }
 
         .bttn-appointment {
             display: flex;
+            width:fit-content;
             padding: 15px 40px;
             flex-direction: column;
             align-items: center;
@@ -646,7 +666,7 @@
             color: white;
             border: none;
         }
-        
+
         .appform_secondary .container {
             align-items: flex-start;
         }
@@ -701,6 +721,13 @@
                 align-items: flex-start;
                 gap: 20px;
             }
+            .form-container {
+                width: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
 
             .textarea {
                 display: flex;
@@ -708,6 +735,11 @@
                 height: 140px;
                 align-items: center;
                 padding: 0;
+                grid-column: 1 / span 2;
+            }
+
+            .bttn-appointment {
+                width: auto;
             }
 
             .appform_secondcontent {
@@ -980,7 +1012,6 @@
             </div>
         </div>
     </section>
-    </section>
     <section class="bestservice">
         <div class="container">
             <div class="section_title">
@@ -1153,36 +1184,41 @@
                     <h5 class="contactustext">Contact Us</h5>
                     <h2 class="appointmenttext">Make an Appointment</h2>
                 </div>
-                <form class="actionform">
-                    <input class="name-and-email name" type="text"  name="fullname" placeholder="Full Name" required>
-                    <input class="name-and-email email" type="email"  name="email" placeholder="example@gmail.com" pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-zA-Z]{2,4}" required>
-                    <p id = "formstatus"> Please enter a value</p>
-                    <p id = "formstatus"> Please enter a value</p>
-                    <select class="date-and-time" name="date">
-                        <option value="">Please Select</option>
-                        <option value="mo">Monday</option>
-                        <option value="tu">Tuesday</option>
-                        <option value="we">Wednesday</option>
-                        <option value="th">Thursday</option>
-                        <option value="fr">Friday</option>
-                    </select>
-                    <select class="date-and-time" name="time">
-                        <option value="">4:00 Available</option>
-                        <option value="8am">8am</option>
-                        <option value="9am">8am</option>
-                        <option value="10am">8am</option>
-                        <option value="11am">8am</option>
-                        <option value="1pm">12am</option>
-                        <option value="3pm">3pm</option>
-                    </select>
-                    <p id = "formstatus"> Please enter a value</p>
-                    <p id = "formstatus"> Please enter a value</p>
-                    <textarea class="textarea" name="message" id="message" rows="5" cols="20" placeholder="Message"></textarea>
-                    <p id = "formstatus"> Please enter a value</p>
-                </form> 
-                  <div>
+                <form class="actionform" id="contact-form">
+                 <div class="form-container">
+                    <div class="input-and-result">
+                        <input class="name-and-email" id="inputFullName" type="text" name="fullname"
+                            placeholder="Full Name" required>
+                        <p id="resultFullName" class="form-result"></p>
+                    </div>
+                    <div class="input-and-result">
+                        <input class="name-and-email" id="inputEmail" type="email" name="email"
+                            placeholder="example@gmail.com" required>
+                        <p id="resultEmail" class="form-result"></p>
+                    </div>
+                    <div class="input-and-result">
+                        <input type="date" class="date-and-time" name="date" id="inputSelectDate">
+                        <p id="resultSelectDate" class="form-result"></p>
+                    </div>
+                    <div class="input-and-result">
+                        <select class="date-and-time" name="time" id="inputSelectTime">
+                            <option value="">4:00 Available</option>
+                            <option value="8am">8am</option>
+                            <option value="9am">9am</option>
+                            <option value="10am">10am</option>
+                            <option value="11am">11am</option>
+                            <option value="1pm">1pm</option>
+                        </select>
+                        <p id="resultSelectTime" class="form-result"></p>
+                    </div>
+                 </div>
+                    <div class="input-and-result">
+                        <textarea class="textarea" name="message" id="inputMessage" rows="5" cols="20"
+                            placeholder="Message"></textarea>
+                        <p id="resultMessage" class="form-result"></p>
+                    </div>    
                     <button class="bttn-appointment" type="submit">Book Appointment</button>
-                  </div>
+                </form>
             </div>
         </div>
     </section>
@@ -1314,4 +1350,5 @@
         </section>
     </footer>
 </body>
+
 </html>
